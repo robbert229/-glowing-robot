@@ -65,10 +65,25 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="gtk-gui\generated.cs" />
-    <Compile Include="MainWindow.cs" />
-    <Compile Include="gtk-gui\MainWindow.cs" />
     <Compile Include="Main.cs" />
     <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="ShadowrunToolMainWindow.cs" />
+    <Compile Include="gtk-gui\ShadowrunToolMainWindow.cs" />
+    <Compile Include="gtk-gui\ShadowrunGui.RangedWeaponImportWindow.cs" />
+    <Compile Include="CharacterNotePage\RangedWeaponImportWindow.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <ProjectReference Include="..\ShadowrunCoreContent\ShadowrunCoreContent.csproj">
+      <Project>{25752D13-903B-4397-BB4D-7AA1C91C1C43}</Project>
+      <Name>ShadowrunCoreContent</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\shadowrunLogic\ShadowrunLogic.csproj">
+      <Project>{8C6EE1D6-9962-4710-B9C9-BCAC3278A8A7}</Project>
+      <Name>ShadowrunLogic</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="CharacterNotePage\" />
+  </ItemGroup>
 </Project>

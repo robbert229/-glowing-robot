@@ -5,10 +5,10 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.0</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{8C6EE1D6-9962-4710-B9C9-BCAC3278A8A7}</ProjectGuid>
+    <ProjectGuid>{25752D13-903B-4397-BB4D-7AA1C91C1C43}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>ShadowrunLogic</RootNamespace>
-    <AssemblyName>ShadowrunLogic</AssemblyName>
+    <RootNamespace>ShadowrunCoreContent</RootNamespace>
+    <AssemblyName>ShadowrunCoreContent</AssemblyName>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -30,40 +30,34 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
-    <Reference Include="gtk-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f">
-      <Package>gtk-sharp-2.0</Package>
-    </Reference>
-    <Reference Include="gdk-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f">
-      <Package>gtk-sharp-2.0</Package>
-    </Reference>
-    <Reference Include="Mono.Posix" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AssemblyInfo.cs" />
-    <Compile Include="DiceRoller.cs" />
-    <Compile Include="Pool.cs" />
-    <Compile Include="Combat.cs" />
-    <Compile Include="DamageType.cs" />
-    <Compile Include="Weapons\IMeleeWeapon.cs" />
-    <Compile Include="Weapons\Ranged\IRangedWeapon.cs" />
-    <Compile Include="Weapons\Ranged\RangedWeaponType.cs" />
-    <Compile Include="Weapons\Ranged\RangedFiringModes.cs" />
-    <Compile Include="Weapons\Ranged\RangedWeaponsCatalog.cs" />
-    <Compile Include="Character\AbstractAttributes.cs" />
-    <Compile Include="gtk-gui\generated.cs" />
-    <Compile Include="Manifest\IManifest.cs" />
+    <Compile Include="Weapons\Firearms\Tasers\DefianceEXShocker.cs" />
+    <Compile Include="Weapons\Firearms\Tasers\YamahaPulsar.cs" />
+    <Compile Include="Weapons\Firearms\RangedWeaponsManifest.cs" />
+    <Compile Include="Weapons\Firearms\Holdouts\FichettiTiffaniNeedler.cs" />
+    <Compile Include="Weapons\Firearms\Holdouts\StreetlineSpecial.cs" />
+    <Compile Include="Weapons\Firearms\Holdouts\WaltherPalmPistol.cs" />
+    <Compile Include="Weapons\Firearms\LightPistols\AresLightFire75.cs" />
+    <Compile Include="Weapons\Firearms\LightPistols\AresLightFire70.cs" />
+    <Compile Include="Weapons\Firearms\LightPistols\Beretta201T.cs" />
+    <Compile Include="Weapons\Firearms\LightPistols\ColtAmericaL36.cs" />
+    <Compile Include="Weapons\Firearms\LightPistols\FichettiSecurity600.cs" />
+    <Compile Include="Weapons\Firearms\LightPistols\TaurusOmni6.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
-    <Folder Include="Character\" />
     <Folder Include="Weapons\" />
-    <Folder Include="Weapons\Melee\" />
-    <Folder Include="Weapons\Ranged\" />
-    <Folder Include="Manifest\" />
+    <Folder Include="Weapons\Firearms\" />
+    <Folder Include="Weapons\Firearms\Tasers\" />
+    <Folder Include="Weapons\Firearms\Holdouts\" />
+    <Folder Include="Weapons\Firearms\LightPistols\" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="gtk-gui\gui.stetic">
-      <LogicalName>gui.stetic</LogicalName>
-    </EmbeddedResource>
+    <ProjectReference Include="..\shadowrunLogic\ShadowrunLogic.csproj">
+      <Project>{8C6EE1D6-9962-4710-B9C9-BCAC3278A8A7}</Project>
+      <Name>ShadowrunLogic</Name>
+    </ProjectReference>
   </ItemGroup>
 </Project>

@@ -7,8 +7,8 @@ namespace ShadowrunLogic
 		Pool attackPool;
 		Pool dodgePoo;
 
-		Character attacker;
-		Character defender;
+		AbstractAttributes attacker;
+		AbstractAttributes defender;
 
 		public Combat ()
 		{

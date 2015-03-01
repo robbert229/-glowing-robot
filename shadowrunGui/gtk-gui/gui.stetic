@@ -6,9 +6,12 @@
   </configuration>
   <import>
     <widget-library name="glade-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
+    <widget-library name="../../ShadowrunCoreContent/bin/Debug/ShadowrunCoreContent.dll" />
+    <widget-library name="../../shadowrunLogic/bin/Debug/ShadowrunLogic.dll" />
+    <widget-library name="MonoDevelop.Ide, Version=2.6.0.0, Culture=neutral" />
     <widget-library name="../bin/Debug/ShadowrunGui.exe" internal="true" />
   </import>
-  <widget class="Gtk.Window" id="MainWindow" design-size="890 671">
+  <widget class="Gtk.Window" id="ShadowrunToolMainWindow" design-size="890 671">
     <property name="MemberName" />
     <property name="Title" translatable="yes">Shadowrun Tool</property>
     <property name="WindowPosition">CenterOnParent</property>
@@ -535,6 +538,7 @@
                             <property name="Type">TextOnly</property>
                             <property name="Label" translatable="yes">Import Attributes</property>
                             <property name="UseUnderline">True</property>
+                            <signal name="Clicked" handler="AttributeImport_Click" />
                           </widget>
                           <packing>
                             <property name="Position">15</property>
@@ -544,19 +548,7 @@
                           </packing>
                         </child>
                         <child>
-                          <widget class="Gtk.Button" id="ExportAttributeSection_Button">
-                            <property name="MemberName" />
-                            <property name="CanFocus">True</property>
-                            <property name="Type">TextOnly</property>
-                            <property name="Label" translatable="yes">Export Attributes</property>
-                            <property name="UseUnderline">True</property>
-                          </widget>
-                          <packing>
-                            <property name="Position">16</property>
-                            <property name="AutoSize">True</property>
-                            <property name="Expand">False</property>
-                            <property name="Fill">False</property>
-                          </packing>
+                          <placeholder />
                         </child>
                       </widget>
                     </child>
@@ -699,7 +691,6 @@
                                 <property name="MemberName" />
                                 <property name="CanFocus">True</property>
                                 <property name="Label" translatable="yes">Physical</property>
-                                <property name="Active">True</property>
                                 <property name="DrawIndicator">True</property>
                                 <property name="HasLabel">True</property>
                                 <property name="UseUnderline">True</property>
@@ -947,6 +938,7 @@
                             <property name="Type">TextOnly</property>
                             <property name="Label" translatable="yes">Import Ranged Weapon Stats</property>
                             <property name="UseUnderline">True</property>
+                            <signal name="Clicked" handler="RangedWeaponImport_Click" />
                           </widget>
                           <packing>
                             <property name="Position">10</property>
@@ -956,19 +948,7 @@
                           </packing>
                         </child>
                         <child>
-                          <widget class="Gtk.Button" id="ExportRanged_Button">
-                            <property name="MemberName" />
-                            <property name="CanFocus">True</property>
-                            <property name="Type">TextOnly</property>
-                            <property name="Label" translatable="yes">Export Ranged Weapon Stats</property>
-                            <property name="UseUnderline">True</property>
-                          </widget>
-                          <packing>
-                            <property name="Position">11</property>
-                            <property name="AutoSize">True</property>
-                            <property name="Expand">False</property>
-                            <property name="Fill">False</property>
-                          </packing>
+                          <placeholder />
                         </child>
                         <child>
                           <widget class="Gtk.HSeparator" id="hseparator4">
@@ -1086,7 +1066,6 @@
                                 <property name="MemberName" />
                                 <property name="CanFocus">True</property>
                                 <property name="Label" translatable="yes">Physical</property>
-                                <property name="Active">True</property>
                                 <property name="DrawIndicator">True</property>
                                 <property name="HasLabel">True</property>
                                 <property name="UseUnderline">True</property>
@@ -1159,11 +1138,11 @@
                           </packing>
                         </child>
                         <child>
-                          <widget class="Gtk.Button" id="ImportWeaponsSection_Button">
+                          <widget class="Gtk.Button" id="ImportWeapons_Button">
                             <property name="MemberName" />
                             <property name="CanFocus">True</property>
                             <property name="Type">TextOnly</property>
-                            <property name="Label" translatable="yes">Import Weapons</property>
+                            <property name="Label" translatable="yes">Import Melee Weapons Stats</property>
                             <property name="UseUnderline">True</property>
                           </widget>
                           <packing>
@@ -1174,19 +1153,7 @@
                           </packing>
                         </child>
                         <child>
-                          <widget class="Gtk.Button" id="ExportWeaponsSection_Button">
-                            <property name="MemberName" />
-                            <property name="CanFocus">True</property>
-                            <property name="Type">TextOnly</property>
-                            <property name="Label" translatable="yes">Export Weapons</property>
-                            <property name="UseUnderline">True</property>
-                          </widget>
-                          <packing>
-                            <property name="Position">19</property>
-                            <property name="AutoSize">True</property>
-                            <property name="Expand">False</property>
-                            <property name="Fill">False</property>
-                          </packing>
+                          <placeholder />
                         </child>
                         <child>
                           <widget class="Gtk.HSeparator" id="hseparator6">
@@ -1339,6 +1306,51 @@
           </widget>
           <packing>
             <property name="type">tab</property>
+          </packing>
+        </child>
+      </widget>
+    </child>
+  </widget>
+  <widget class="Gtk.Window" id="ShadowrunGui.RangedWeaponImportWindow" design-size="400 302">
+    <property name="MemberName" />
+    <property name="Title" translatable="yes">RangedWeaponImportWindow</property>
+    <property name="WindowPosition">Center</property>
+    <property name="Modal">True</property>
+    <child>
+      <widget class="Gtk.VBox" id="vbox1">
+        <property name="MemberName" />
+        <property name="Spacing">6</property>
+        <child>
+          <widget class="Gtk.ScrolledWindow" id="GtkScrolledWindow">
+            <property name="MemberName" />
+            <property name="ShadowType">In</property>
+            <child>
+              <widget class="Gtk.TreeView" id="WeaponList_TreeView">
+                <property name="MemberName" />
+                <property name="CanFocus">True</property>
+                <property name="ShowScrollbars">True</property>
+              </widget>
+            </child>
+          </widget>
+          <packing>
+            <property name="Position">0</property>
+            <property name="AutoSize">True</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Button" id="TreeViewSelect_Button">
+            <property name="MemberName" />
+            <property name="CanFocus">True</property>
+            <property name="Type">TextOnly</property>
+            <property name="Label" translatable="yes">Select</property>
+            <property name="UseUnderline">True</property>
+            <signal name="Clicked" handler="TreeViewSelect_Click" />
+          </widget>
+          <packing>
+            <property name="Position">1</property>
+            <property name="AutoSize">True</property>
+            <property name="Expand">False</property>
+            <property name="Fill">False</property>
           </packing>
         </child>
       </widget>
