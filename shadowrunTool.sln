@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShadowrunGui", "shadowrunGui\ShadowrunGui.csproj", "{9595B846-94C9-4B57-BDF7-D7B7C7220B7F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShadowrunLogic", "shadowrunLogic\ShadowrunLogic.csproj", "{8C6EE1D6-9962-4710-B9C9-BCAC3278A8A7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShadowrunLogicTests", "shadowrunLogicTests\ShadowrunLogicTests.csproj", "{288AEEE9-99A9-4B6E-B3F5-E037162CF1FD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{288AEEE9-99A9-4B6E-B3F5-E037162CF1FD}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{288AEEE9-99A9-4B6E-B3F5-E037162CF1FD}.Debug|x86.Build.0 = Debug|Any CPU
+		{288AEEE9-99A9-4B6E-B3F5-E037162CF1FD}.Release|x86.ActiveCfg = Release|Any CPU
+		{288AEEE9-99A9-4B6E-B3F5-E037162CF1FD}.Release|x86.Build.0 = Release|Any CPU
+		{8C6EE1D6-9962-4710-B9C9-BCAC3278A8A7}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{8C6EE1D6-9962-4710-B9C9-BCAC3278A8A7}.Debug|x86.Build.0 = Debug|Any CPU
+		{8C6EE1D6-9962-4710-B9C9-BCAC3278A8A7}.Release|x86.ActiveCfg = Release|Any CPU
+		{8C6EE1D6-9962-4710-B9C9-BCAC3278A8A7}.Release|x86.Build.0 = Release|Any CPU
+		{9595B846-94C9-4B57-BDF7-D7B7C7220B7F}.Debug|x86.ActiveCfg = Debug|x86
+		{9595B846-94C9-4B57-BDF7-D7B7C7220B7F}.Debug|x86.Build.0 = Debug|x86
+		{9595B846-94C9-4B57-BDF7-D7B7C7220B7F}.Release|x86.ActiveCfg = Release|x86
+		{9595B846-94C9-4B57-BDF7-D7B7C7220B7F}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = shadowrunGui\ShadowrunGui.csproj
+	EndGlobalSection
+EndGlobal
