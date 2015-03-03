@@ -43,6 +43,10 @@ namespace ShadowrunCoreContent
 			return 0;
 		}
 
+		public override RangedWeaponSkills Skill ()
+		{
+			return RangedWeaponSkills.Pistols;
+		}
 	}
 }
 

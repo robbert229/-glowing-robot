@@ -42,6 +42,11 @@ namespace ShadowrunCoreContent
 		public override int Recoil(){
 			return 0;
 		}
+
+		public override RangedWeaponSkills Skill ()
+		{
+			return RangedWeaponSkills.Pistols;
+		}
 	}
 }
 

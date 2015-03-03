@@ -18,6 +18,9 @@ public partial class ShadowrunToolMainWindow
 	private global::Gtk.HBox hbox3;
 	private global::Gtk.Label Agility_Label;
 	private global::Gtk.Entry Agility_Textbox;
+	private global::Gtk.HBox hbox12;
+	private global::Gtk.Label Strength_Label;
+	private global::Gtk.Entry Strength_Textbox;
 	private global::Gtk.HBox hbox4;
 	private global::Gtk.Label Reaction_Label;
 	private global::Gtk.Entry Reaction_Textbox;
@@ -43,14 +46,39 @@ public partial class ShadowrunToolMainWindow
 	private global::Gtk.HBox hbox51;
 	private global::Gtk.Label Armor_Label;
 	private global::Gtk.Entry Armor_Textbox;
-	private global::Gtk.HBox hbox52;
-	private global::Gtk.Label MeleeSkill_Label;
-	private global::Gtk.Entry MeleeSkill_Textbox;
-	private global::Gtk.HBox hbox53;
-	private global::Gtk.Label RangedSkill_Label;
-	private global::Gtk.Entry RangedSkill_Textbox;
 	private global::Gtk.Button ImportAttributeSection_Button;
 	private global::Gtk.Label AttributesFrame_Label;
+	private global::Gtk.Frame Skills_Frame;
+	private global::Gtk.Alignment GtkAlignment3;
+	private global::Gtk.VBox vbox2;
+	private global::Gtk.HBox hbox13;
+	private global::Gtk.Label Archery_Label;
+	private global::Gtk.SpinButton Archery_Spinbox;
+	private global::Gtk.HBox hbox14;
+	private global::Gtk.Label Automatics_Label;
+	private global::Gtk.SpinButton AutomaticsSpinbox;
+	private global::Gtk.HBox hbox15;
+	private global::Gtk.Label Blades_Label;
+	private global::Gtk.SpinButton Blades_Spinbox;
+	private global::Gtk.HBox hbox16;
+	private global::Gtk.Label Clubs_Label;
+	private global::Gtk.SpinButton Clubs_Spinbox;
+	private global::Gtk.HBox hbox17;
+	private global::Gtk.Label HeavyWeapons_Label;
+	private global::Gtk.SpinButton HeavyWeapons_Spinbox;
+	private global::Gtk.HBox hbox18;
+	private global::Gtk.Label Longarms_Label;
+	private global::Gtk.SpinButton Longarms_Spinbox;
+	private global::Gtk.HBox hbox19;
+	private global::Gtk.Label Pistols_Label;
+	private global::Gtk.SpinButton Pistols_Spinbox;
+	private global::Gtk.HBox hbox20;
+	private global::Gtk.Label ThrowingWeapons_Label;
+	private global::Gtk.SpinButton ThrowingWeapons_Spinbox;
+	private global::Gtk.HBox hbox;
+	private global::Gtk.Label UnarmedCombat_Label;
+	private global::Gtk.SpinButton UnarmedCombat_Spinbox;
+	private global::Gtk.Label SkillsFrame_Label;
 	private global::Gtk.Frame Weapons_Frame;
 	private global::Gtk.Alignment GtkAlignment;
 	private global::Gtk.VBox Weapons_Vbox;
@@ -74,7 +102,8 @@ public partial class ShadowrunToolMainWindow
 	private global::Gtk.HBox hbox11;
 	private global::Gtk.Label RangedRecoil_Label;
 	private global::Gtk.Entry RangedRecoil_Textbox;
-	private global::Gtk.Label FiringModesSupported_Label;
+	private global::Gtk.Expander FiringModes_Expander;
+	private global::Gtk.VBox vbox3;
 	private global::Gtk.HBox hbox60;
 	private global::Gtk.CheckButton SingleShot_Checkbox;
 	private global::Gtk.CheckButton SemiAutomatic_Checkbox;
@@ -84,6 +113,19 @@ public partial class ShadowrunToolMainWindow
 	private global::Gtk.HBox hbox62;
 	private global::Gtk.CheckButton LongBurst_Checkbox;
 	private global::Gtk.CheckButton FullAuto_Checkbox;
+	private global::Gtk.Label FiringModesExpander_Label;
+	private global::Gtk.Expander RangedSkill_Expander;
+	private global::Gtk.VBox vbox5;
+	private global::Gtk.HBox hbox21;
+	private global::Gtk.RadioButton Archery_Radio;
+	private global::Gtk.RadioButton Automatics_Radio;
+	private global::Gtk.HBox hbox22;
+	private global::Gtk.RadioButton HeavyWeapons_Radio;
+	private global::Gtk.RadioButton Longarms_Radio;
+	private global::Gtk.HBox hbox23;
+	private global::Gtk.RadioButton ThrowingWeapons_Radio;
+	private global::Gtk.RadioButton Pistols_Radio;
+	private global::Gtk.Label RangedSkillExpander_Label;
 	private global::Gtk.Button ImportRanged_Button;
 	private global::Gtk.HSeparator hseparator4;
 	private global::Gtk.Label MeleeWeapon_Label;
@@ -100,6 +142,14 @@ public partial class ShadowrunToolMainWindow
 	private global::Gtk.HBox hbox65;
 	private global::Gtk.Label MeleeAP_Label;
 	private global::Gtk.Entry MeleeAP_Textbox;
+	private global::Gtk.Expander MeleeSkill_Expander;
+	private global::Gtk.VBox vbox6;
+	private global::Gtk.HBox hbox25;
+	private global::Gtk.RadioButton Blades_Radio;
+	private global::Gtk.RadioButton Clubs_Radio;
+	private global::Gtk.HBox hbox24;
+	private global::Gtk.RadioButton Unarmed_Radio;
+	private global::Gtk.Label MeleeSkillExpander_Label;
 	private global::Gtk.Button ImportWeapons_Button;
 	private global::Gtk.HSeparator hseparator6;
 	private global::Gtk.Button Save_Button;
@@ -234,6 +284,33 @@ public partial class ShadowrunToolMainWindow
 		w10.Expand = false;
 		w10.Fill = false;
 		// Container child Attribute_Vbox.Gtk.Box+BoxChild
+		this.hbox12 = new global::Gtk.HBox ();
+		this.hbox12.Name = "hbox12";
+		this.hbox12.Spacing = 6;
+		// Container child hbox12.Gtk.Box+BoxChild
+		this.Strength_Label = new global::Gtk.Label ();
+		this.Strength_Label.Name = "Strength_Label";
+		this.Strength_Label.LabelProp = global::Mono.Unix.Catalog.GetString ("Strength");
+		this.hbox12.Add (this.Strength_Label);
+		global::Gtk.Box.BoxChild w11 = ((global::Gtk.Box.BoxChild)(this.hbox12 [this.Strength_Label]));
+		w11.Position = 0;
+		w11.Fill = false;
+		// Container child hbox12.Gtk.Box+BoxChild
+		this.Strength_Textbox = new global::Gtk.Entry ();
+		this.Strength_Textbox.CanFocus = true;
+		this.Strength_Textbox.Name = "Strength_Textbox";
+		this.Strength_Textbox.IsEditable = true;
+		this.Strength_Textbox.InvisibleChar = '●';
+		this.hbox12.Add (this.Strength_Textbox);
+		global::Gtk.Box.BoxChild w12 = ((global::Gtk.Box.BoxChild)(this.hbox12 [this.Strength_Textbox]));
+		w12.Position = 1;
+		w12.Expand = false;
+		this.Attribute_Vbox.Add (this.hbox12);
+		global::Gtk.Box.BoxChild w13 = ((global::Gtk.Box.BoxChild)(this.Attribute_Vbox [this.hbox12]));
+		w13.Position = 4;
+		w13.Expand = false;
+		w13.Fill = false;
+		// Container child Attribute_Vbox.Gtk.Box+BoxChild
 		this.hbox4 = new global::Gtk.HBox ();
 		this.hbox4.Name = "hbox4";
 		this.hbox4.Spacing = 6;
@@ -242,9 +319,9 @@ public partial class ShadowrunToolMainWindow
 		this.Reaction_Label.Name = "Reaction_Label";
 		this.Reaction_Label.LabelProp = global::Mono.Unix.Catalog.GetString ("Reaction");
 		this.hbox4.Add (this.Reaction_Label);
-		global::Gtk.Box.BoxChild w11 = ((global::Gtk.Box.BoxChild)(this.hbox4 [this.Reaction_Label]));
-		w11.Position = 0;
-		w11.Fill = false;
+		global::Gtk.Box.BoxChild w14 = ((global::Gtk.Box.BoxChild)(this.hbox4 [this.Reaction_Label]));
+		w14.Position = 0;
+		w14.Fill = false;
 		// Container child hbox4.Gtk.Box+BoxChild
 		this.Reaction_Textbox = new global::Gtk.Entry ();
 		this.Reaction_Textbox.CanFocus = true;
@@ -252,14 +329,14 @@ public partial class ShadowrunToolMainWindow
 		this.Reaction_Textbox.IsEditable = true;
 		this.Reaction_Textbox.InvisibleChar = '●';
 		this.hbox4.Add (this.Reaction_Textbox);
-		global::Gtk.Box.BoxChild w12 = ((global::Gtk.Box.BoxChild)(this.hbox4 [this.Reaction_Textbox]));
-		w12.Position = 1;
-		w12.Expand = false;
+		global::Gtk.Box.BoxChild w15 = ((global::Gtk.Box.BoxChild)(this.hbox4 [this.Reaction_Textbox]));
+		w15.Position = 1;
+		w15.Expand = false;
 		this.Attribute_Vbox.Add (this.hbox4);
-		global::Gtk.Box.BoxChild w13 = ((global::Gtk.Box.BoxChild)(this.Attribute_Vbox [this.hbox4]));
-		w13.Position = 4;
-		w13.Expand = false;
-		w13.Fill = false;
+		global::Gtk.Box.BoxChild w16 = ((global::Gtk.Box.BoxChild)(this.Attribute_Vbox [this.hbox4]));
+		w16.Position = 5;
+		w16.Expand = false;
+		w16.Fill = false;
 		// Container child Attribute_Vbox.Gtk.Box+BoxChild
 		this.hbox5 = new global::Gtk.HBox ();
 		this.hbox5.Name = "hbox5";
@@ -269,9 +346,9 @@ public partial class ShadowrunToolMainWindow
 		this.Willpower_Label.Name = "Willpower_Label";
 		this.Willpower_Label.LabelProp = global::Mono.Unix.Catalog.GetString ("Willpower");
 		this.hbox5.Add (this.Willpower_Label);
-		global::Gtk.Box.BoxChild w14 = ((global::Gtk.Box.BoxChild)(this.hbox5 [this.Willpower_Label]));
-		w14.Position = 0;
-		w14.Fill = false;
+		global::Gtk.Box.BoxChild w17 = ((global::Gtk.Box.BoxChild)(this.hbox5 [this.Willpower_Label]));
+		w17.Position = 0;
+		w17.Fill = false;
 		// Container child hbox5.Gtk.Box+BoxChild
 		this.Willpower_Textbox = new global::Gtk.Entry ();
 		this.Willpower_Textbox.CanFocus = true;
@@ -279,14 +356,14 @@ public partial class ShadowrunToolMainWindow
 		this.Willpower_Textbox.IsEditable = true;
 		this.Willpower_Textbox.InvisibleChar = '●';
 		this.hbox5.Add (this.Willpower_Textbox);
-		global::Gtk.Box.BoxChild w15 = ((global::Gtk.Box.BoxChild)(this.hbox5 [this.Willpower_Textbox]));
-		w15.Position = 1;
-		w15.Expand = false;
+		global::Gtk.Box.BoxChild w18 = ((global::Gtk.Box.BoxChild)(this.hbox5 [this.Willpower_Textbox]));
+		w18.Position = 1;
+		w18.Expand = false;
 		this.Attribute_Vbox.Add (this.hbox5);
-		global::Gtk.Box.BoxChild w16 = ((global::Gtk.Box.BoxChild)(this.Attribute_Vbox [this.hbox5]));
-		w16.Position = 5;
-		w16.Expand = false;
-		w16.Fill = false;
+		global::Gtk.Box.BoxChild w19 = ((global::Gtk.Box.BoxChild)(this.Attribute_Vbox [this.hbox5]));
+		w19.Position = 6;
+		w19.Expand = false;
+		w19.Fill = false;
 		// Container child Attribute_Vbox.Gtk.Box+BoxChild
 		this.hbox6 = new global::Gtk.HBox ();
 		this.hbox6.Name = "hbox6";
@@ -296,9 +373,9 @@ public partial class ShadowrunToolMainWindow
 		this.Logic_Label.Name = "Logic_Label";
 		this.Logic_Label.LabelProp = global::Mono.Unix.Catalog.GetString ("Logic");
 		this.hbox6.Add (this.Logic_Label);
-		global::Gtk.Box.BoxChild w17 = ((global::Gtk.Box.BoxChild)(this.hbox6 [this.Logic_Label]));
-		w17.Position = 0;
-		w17.Fill = false;
+		global::Gtk.Box.BoxChild w20 = ((global::Gtk.Box.BoxChild)(this.hbox6 [this.Logic_Label]));
+		w20.Position = 0;
+		w20.Fill = false;
 		// Container child hbox6.Gtk.Box+BoxChild
 		this.Logic_Textbox = new global::Gtk.Entry ();
 		this.Logic_Textbox.CanFocus = true;
@@ -306,14 +383,14 @@ public partial class ShadowrunToolMainWindow
 		this.Logic_Textbox.IsEditable = true;
 		this.Logic_Textbox.InvisibleChar = '●';
 		this.hbox6.Add (this.Logic_Textbox);
-		global::Gtk.Box.BoxChild w18 = ((global::Gtk.Box.BoxChild)(this.hbox6 [this.Logic_Textbox]));
-		w18.Position = 1;
-		w18.Expand = false;
+		global::Gtk.Box.BoxChild w21 = ((global::Gtk.Box.BoxChild)(this.hbox6 [this.Logic_Textbox]));
+		w21.Position = 1;
+		w21.Expand = false;
 		this.Attribute_Vbox.Add (this.hbox6);
-		global::Gtk.Box.BoxChild w19 = ((global::Gtk.Box.BoxChild)(this.Attribute_Vbox [this.hbox6]));
-		w19.Position = 6;
-		w19.Expand = false;
-		w19.Fill = false;
+		global::Gtk.Box.BoxChild w22 = ((global::Gtk.Box.BoxChild)(this.Attribute_Vbox [this.hbox6]));
+		w22.Position = 7;
+		w22.Expand = false;
+		w22.Fill = false;
 		// Container child Attribute_Vbox.Gtk.Box+BoxChild
 		this.hbox7 = new global::Gtk.HBox ();
 		this.hbox7.Name = "hbox7";
@@ -323,9 +400,9 @@ public partial class ShadowrunToolMainWindow
 		this.Intuiton_Label.Name = "Intuiton_Label";
 		this.Intuiton_Label.LabelProp = global::Mono.Unix.Catalog.GetString ("Intuition");
 		this.hbox7.Add (this.Intuiton_Label);
-		global::Gtk.Box.BoxChild w20 = ((global::Gtk.Box.BoxChild)(this.hbox7 [this.Intuiton_Label]));
-		w20.Position = 0;
-		w20.Fill = false;
+		global::Gtk.Box.BoxChild w23 = ((global::Gtk.Box.BoxChild)(this.hbox7 [this.Intuiton_Label]));
+		w23.Position = 0;
+		w23.Fill = false;
 		// Container child hbox7.Gtk.Box+BoxChild
 		this.Intuition_Textbox = new global::Gtk.Entry ();
 		this.Intuition_Textbox.CanFocus = true;
@@ -333,14 +410,14 @@ public partial class ShadowrunToolMainWindow
 		this.Intuition_Textbox.IsEditable = true;
 		this.Intuition_Textbox.InvisibleChar = '●';
 		this.hbox7.Add (this.Intuition_Textbox);
-		global::Gtk.Box.BoxChild w21 = ((global::Gtk.Box.BoxChild)(this.hbox7 [this.Intuition_Textbox]));
-		w21.Position = 1;
-		w21.Expand = false;
+		global::Gtk.Box.BoxChild w24 = ((global::Gtk.Box.BoxChild)(this.hbox7 [this.Intuition_Textbox]));
+		w24.Position = 1;
+		w24.Expand = false;
 		this.Attribute_Vbox.Add (this.hbox7);
-		global::Gtk.Box.BoxChild w22 = ((global::Gtk.Box.BoxChild)(this.Attribute_Vbox [this.hbox7]));
-		w22.Position = 7;
-		w22.Expand = false;
-		w22.Fill = false;
+		global::Gtk.Box.BoxChild w25 = ((global::Gtk.Box.BoxChild)(this.Attribute_Vbox [this.hbox7]));
+		w25.Position = 8;
+		w25.Expand = false;
+		w25.Fill = false;
 		// Container child Attribute_Vbox.Gtk.Box+BoxChild
 		this.hbox8 = new global::Gtk.HBox ();
 		this.hbox8.Name = "hbox8";
@@ -350,9 +427,9 @@ public partial class ShadowrunToolMainWindow
 		this.Charisma_Label.Name = "Charisma_Label";
 		this.Charisma_Label.LabelProp = global::Mono.Unix.Catalog.GetString ("Charisma");
 		this.hbox8.Add (this.Charisma_Label);
-		global::Gtk.Box.BoxChild w23 = ((global::Gtk.Box.BoxChild)(this.hbox8 [this.Charisma_Label]));
-		w23.Position = 0;
-		w23.Fill = false;
+		global::Gtk.Box.BoxChild w26 = ((global::Gtk.Box.BoxChild)(this.hbox8 [this.Charisma_Label]));
+		w26.Position = 0;
+		w26.Fill = false;
 		// Container child hbox8.Gtk.Box+BoxChild
 		this.Charisma_Textbox = new global::Gtk.Entry ();
 		this.Charisma_Textbox.CanFocus = true;
@@ -360,22 +437,22 @@ public partial class ShadowrunToolMainWindow
 		this.Charisma_Textbox.IsEditable = true;
 		this.Charisma_Textbox.InvisibleChar = '●';
 		this.hbox8.Add (this.Charisma_Textbox);
-		global::Gtk.Box.BoxChild w24 = ((global::Gtk.Box.BoxChild)(this.hbox8 [this.Charisma_Textbox]));
-		w24.Position = 1;
-		w24.Expand = false;
+		global::Gtk.Box.BoxChild w27 = ((global::Gtk.Box.BoxChild)(this.hbox8 [this.Charisma_Textbox]));
+		w27.Position = 1;
+		w27.Expand = false;
 		this.Attribute_Vbox.Add (this.hbox8);
-		global::Gtk.Box.BoxChild w25 = ((global::Gtk.Box.BoxChild)(this.Attribute_Vbox [this.hbox8]));
-		w25.Position = 8;
-		w25.Expand = false;
-		w25.Fill = false;
+		global::Gtk.Box.BoxChild w28 = ((global::Gtk.Box.BoxChild)(this.Attribute_Vbox [this.hbox8]));
+		w28.Position = 9;
+		w28.Expand = false;
+		w28.Fill = false;
 		// Container child Attribute_Vbox.Gtk.Box+BoxChild
 		this.hseparator5 = new global::Gtk.HSeparator ();
 		this.hseparator5.Name = "hseparator5";
 		this.Attribute_Vbox.Add (this.hseparator5);
-		global::Gtk.Box.BoxChild w26 = ((global::Gtk.Box.BoxChild)(this.Attribute_Vbox [this.hseparator5]));
-		w26.Position = 9;
-		w26.Expand = false;
-		w26.Fill = false;
+		global::Gtk.Box.BoxChild w29 = ((global::Gtk.Box.BoxChild)(this.Attribute_Vbox [this.hseparator5]));
+		w29.Position = 10;
+		w29.Expand = false;
+		w29.Fill = false;
 		// Container child Attribute_Vbox.Gtk.Box+BoxChild
 		this.hbox54 = new global::Gtk.HBox ();
 		this.hbox54.Name = "hbox54";
@@ -385,9 +462,9 @@ public partial class ShadowrunToolMainWindow
 		this.Initiative_Label.Name = "Initiative_Label";
 		this.Initiative_Label.LabelProp = global::Mono.Unix.Catalog.GetString ("Initiative");
 		this.hbox54.Add (this.Initiative_Label);
-		global::Gtk.Box.BoxChild w27 = ((global::Gtk.Box.BoxChild)(this.hbox54 [this.Initiative_Label]));
-		w27.Position = 0;
-		w27.Fill = false;
+		global::Gtk.Box.BoxChild w30 = ((global::Gtk.Box.BoxChild)(this.hbox54 [this.Initiative_Label]));
+		w30.Position = 0;
+		w30.Fill = false;
 		// Container child hbox54.Gtk.Box+BoxChild
 		this.InitiativeDiceCount_Textbox = new global::Gtk.Entry ();
 		this.InitiativeDiceCount_Textbox.WidthRequest = 35;
@@ -396,17 +473,17 @@ public partial class ShadowrunToolMainWindow
 		this.InitiativeDiceCount_Textbox.IsEditable = true;
 		this.InitiativeDiceCount_Textbox.InvisibleChar = '●';
 		this.hbox54.Add (this.InitiativeDiceCount_Textbox);
-		global::Gtk.Box.BoxChild w28 = ((global::Gtk.Box.BoxChild)(this.hbox54 [this.InitiativeDiceCount_Textbox]));
-		w28.Position = 1;
+		global::Gtk.Box.BoxChild w31 = ((global::Gtk.Box.BoxChild)(this.hbox54 [this.InitiativeDiceCount_Textbox]));
+		w31.Position = 1;
 		// Container child hbox54.Gtk.Box+BoxChild
 		this.InitiativeModifier_Label = new global::Gtk.Label ();
 		this.InitiativeModifier_Label.Name = "InitiativeModifier_Label";
 		this.InitiativeModifier_Label.LabelProp = global::Mono.Unix.Catalog.GetString ("D6 +");
 		this.hbox54.Add (this.InitiativeModifier_Label);
-		global::Gtk.Box.BoxChild w29 = ((global::Gtk.Box.BoxChild)(this.hbox54 [this.InitiativeModifier_Label]));
-		w29.Position = 2;
-		w29.Expand = false;
-		w29.Fill = false;
+		global::Gtk.Box.BoxChild w32 = ((global::Gtk.Box.BoxChild)(this.hbox54 [this.InitiativeModifier_Label]));
+		w32.Position = 2;
+		w32.Expand = false;
+		w32.Fill = false;
 		// Container child hbox54.Gtk.Box+BoxChild
 		this.InitiativeModifier_Textbox = new global::Gtk.Entry ();
 		this.InitiativeModifier_Textbox.WidthRequest = 35;
@@ -415,21 +492,21 @@ public partial class ShadowrunToolMainWindow
 		this.InitiativeModifier_Textbox.IsEditable = true;
 		this.InitiativeModifier_Textbox.InvisibleChar = '●';
 		this.hbox54.Add (this.InitiativeModifier_Textbox);
-		global::Gtk.Box.BoxChild w30 = ((global::Gtk.Box.BoxChild)(this.hbox54 [this.InitiativeModifier_Textbox]));
-		w30.Position = 3;
+		global::Gtk.Box.BoxChild w33 = ((global::Gtk.Box.BoxChild)(this.hbox54 [this.InitiativeModifier_Textbox]));
+		w33.Position = 3;
 		this.Attribute_Vbox.Add (this.hbox54);
-		global::Gtk.Box.BoxChild w31 = ((global::Gtk.Box.BoxChild)(this.Attribute_Vbox [this.hbox54]));
-		w31.Position = 10;
-		w31.Expand = false;
-		w31.Fill = false;
+		global::Gtk.Box.BoxChild w34 = ((global::Gtk.Box.BoxChild)(this.Attribute_Vbox [this.hbox54]));
+		w34.Position = 11;
+		w34.Expand = false;
+		w34.Fill = false;
 		// Container child Attribute_Vbox.Gtk.Box+BoxChild
 		this.hseparator1 = new global::Gtk.HSeparator ();
 		this.hseparator1.Name = "hseparator1";
 		this.Attribute_Vbox.Add (this.hseparator1);
-		global::Gtk.Box.BoxChild w32 = ((global::Gtk.Box.BoxChild)(this.Attribute_Vbox [this.hseparator1]));
-		w32.Position = 11;
-		w32.Expand = false;
-		w32.Fill = false;
+		global::Gtk.Box.BoxChild w35 = ((global::Gtk.Box.BoxChild)(this.Attribute_Vbox [this.hseparator1]));
+		w35.Position = 12;
+		w35.Expand = false;
+		w35.Fill = false;
 		// Container child Attribute_Vbox.Gtk.Box+BoxChild
 		this.hbox51 = new global::Gtk.HBox ();
 		this.hbox51.Name = "hbox51";
@@ -439,9 +516,9 @@ public partial class ShadowrunToolMainWindow
 		this.Armor_Label.Name = "Armor_Label";
 		this.Armor_Label.LabelProp = global::Mono.Unix.Catalog.GetString ("Armor");
 		this.hbox51.Add (this.Armor_Label);
-		global::Gtk.Box.BoxChild w33 = ((global::Gtk.Box.BoxChild)(this.hbox51 [this.Armor_Label]));
-		w33.Position = 0;
-		w33.Fill = false;
+		global::Gtk.Box.BoxChild w36 = ((global::Gtk.Box.BoxChild)(this.hbox51 [this.Armor_Label]));
+		w36.Position = 0;
+		w36.Fill = false;
 		// Container child hbox51.Gtk.Box+BoxChild
 		this.Armor_Textbox = new global::Gtk.Entry ();
 		this.Armor_Textbox.CanFocus = true;
@@ -449,79 +526,25 @@ public partial class ShadowrunToolMainWindow
 		this.Armor_Textbox.IsEditable = true;
 		this.Armor_Textbox.InvisibleChar = '●';
 		this.hbox51.Add (this.Armor_Textbox);
-		global::Gtk.Box.BoxChild w34 = ((global::Gtk.Box.BoxChild)(this.hbox51 [this.Armor_Textbox]));
-		w34.Position = 1;
-		w34.Expand = false;
-		this.Attribute_Vbox.Add (this.hbox51);
-		global::Gtk.Box.BoxChild w35 = ((global::Gtk.Box.BoxChild)(this.Attribute_Vbox [this.hbox51]));
-		w35.Position = 12;
-		w35.Expand = false;
-		w35.Fill = false;
-		// Container child Attribute_Vbox.Gtk.Box+BoxChild
-		this.hbox52 = new global::Gtk.HBox ();
-		this.hbox52.Name = "hbox52";
-		this.hbox52.Spacing = 6;
-		// Container child hbox52.Gtk.Box+BoxChild
-		this.MeleeSkill_Label = new global::Gtk.Label ();
-		this.MeleeSkill_Label.Name = "MeleeSkill_Label";
-		this.MeleeSkill_Label.LabelProp = global::Mono.Unix.Catalog.GetString ("Melee Skill");
-		this.hbox52.Add (this.MeleeSkill_Label);
-		global::Gtk.Box.BoxChild w36 = ((global::Gtk.Box.BoxChild)(this.hbox52 [this.MeleeSkill_Label]));
-		w36.Position = 0;
-		w36.Fill = false;
-		// Container child hbox52.Gtk.Box+BoxChild
-		this.MeleeSkill_Textbox = new global::Gtk.Entry ();
-		this.MeleeSkill_Textbox.CanFocus = true;
-		this.MeleeSkill_Textbox.Name = "MeleeSkill_Textbox";
-		this.MeleeSkill_Textbox.IsEditable = true;
-		this.MeleeSkill_Textbox.InvisibleChar = '●';
-		this.hbox52.Add (this.MeleeSkill_Textbox);
-		global::Gtk.Box.BoxChild w37 = ((global::Gtk.Box.BoxChild)(this.hbox52 [this.MeleeSkill_Textbox]));
+		global::Gtk.Box.BoxChild w37 = ((global::Gtk.Box.BoxChild)(this.hbox51 [this.Armor_Textbox]));
 		w37.Position = 1;
 		w37.Expand = false;
-		this.Attribute_Vbox.Add (this.hbox52);
-		global::Gtk.Box.BoxChild w38 = ((global::Gtk.Box.BoxChild)(this.Attribute_Vbox [this.hbox52]));
+		this.Attribute_Vbox.Add (this.hbox51);
+		global::Gtk.Box.BoxChild w38 = ((global::Gtk.Box.BoxChild)(this.Attribute_Vbox [this.hbox51]));
 		w38.Position = 13;
 		w38.Expand = false;
 		w38.Fill = false;
-		// Container child Attribute_Vbox.Gtk.Box+BoxChild
-		this.hbox53 = new global::Gtk.HBox ();
-		this.hbox53.Name = "hbox53";
-		this.hbox53.Spacing = 6;
-		// Container child hbox53.Gtk.Box+BoxChild
-		this.RangedSkill_Label = new global::Gtk.Label ();
-		this.RangedSkill_Label.Name = "RangedSkill_Label";
-		this.RangedSkill_Label.LabelProp = global::Mono.Unix.Catalog.GetString ("Ranged Skill");
-		this.hbox53.Add (this.RangedSkill_Label);
-		global::Gtk.Box.BoxChild w39 = ((global::Gtk.Box.BoxChild)(this.hbox53 [this.RangedSkill_Label]));
-		w39.Position = 0;
-		w39.Fill = false;
-		// Container child hbox53.Gtk.Box+BoxChild
-		this.RangedSkill_Textbox = new global::Gtk.Entry ();
-		this.RangedSkill_Textbox.CanFocus = true;
-		this.RangedSkill_Textbox.Name = "RangedSkill_Textbox";
-		this.RangedSkill_Textbox.IsEditable = true;
-		this.RangedSkill_Textbox.InvisibleChar = '●';
-		this.hbox53.Add (this.RangedSkill_Textbox);
-		global::Gtk.Box.BoxChild w40 = ((global::Gtk.Box.BoxChild)(this.hbox53 [this.RangedSkill_Textbox]));
-		w40.Position = 1;
-		w40.Expand = false;
-		this.Attribute_Vbox.Add (this.hbox53);
-		global::Gtk.Box.BoxChild w41 = ((global::Gtk.Box.BoxChild)(this.Attribute_Vbox [this.hbox53]));
-		w41.Position = 14;
-		w41.Expand = false;
-		w41.Fill = false;
 		// Container child Attribute_Vbox.Gtk.Box+BoxChild
 		this.ImportAttributeSection_Button = new global::Gtk.Button ();
 		this.ImportAttributeSection_Button.CanFocus = true;
 		this.ImportAttributeSection_Button.Name = "ImportAttributeSection_Button";
 		this.ImportAttributeSection_Button.UseUnderline = true;
-		this.ImportAttributeSection_Button.Label = global::Mono.Unix.Catalog.GetString ("Import Attributes");
+		this.ImportAttributeSection_Button.Label = global::Mono.Unix.Catalog.GetString ("Import Attributes And Skills");
 		this.Attribute_Vbox.Add (this.ImportAttributeSection_Button);
-		global::Gtk.Box.BoxChild w42 = ((global::Gtk.Box.BoxChild)(this.Attribute_Vbox [this.ImportAttributeSection_Button]));
-		w42.Position = 15;
-		w42.Expand = false;
-		w42.Fill = false;
+		global::Gtk.Box.BoxChild w39 = ((global::Gtk.Box.BoxChild)(this.Attribute_Vbox [this.ImportAttributeSection_Button]));
+		w39.Position = 14;
+		w39.Expand = false;
+		w39.Fill = false;
 		this.GtkAlignment2.Add (this.Attribute_Vbox);
 		this.Attributes_Frame.Add (this.GtkAlignment2);
 		this.AttributesFrame_Label = new global::Gtk.Label ();
@@ -530,10 +553,294 @@ public partial class ShadowrunToolMainWindow
 		this.AttributesFrame_Label.UseMarkup = true;
 		this.Attributes_Frame.LabelWidget = this.AttributesFrame_Label;
 		this.Character_Pane.Add (this.Attributes_Frame);
-		global::Gtk.Box.BoxChild w45 = ((global::Gtk.Box.BoxChild)(this.Character_Pane [this.Attributes_Frame]));
+		global::Gtk.Box.BoxChild w42 = ((global::Gtk.Box.BoxChild)(this.Character_Pane [this.Attributes_Frame]));
+		w42.Position = 0;
+		w42.Expand = false;
+		w42.Fill = false;
+		// Container child Character_Pane.Gtk.Box+BoxChild
+		this.Skills_Frame = new global::Gtk.Frame ();
+		this.Skills_Frame.Name = "Skills_Frame";
+		this.Skills_Frame.ShadowType = ((global::Gtk.ShadowType)(0));
+		// Container child Skills_Frame.Gtk.Container+ContainerChild
+		this.GtkAlignment3 = new global::Gtk.Alignment (0F, 0F, 1F, 1F);
+		this.GtkAlignment3.Name = "GtkAlignment3";
+		this.GtkAlignment3.LeftPadding = ((uint)(12));
+		// Container child GtkAlignment3.Gtk.Container+ContainerChild
+		this.vbox2 = new global::Gtk.VBox ();
+		this.vbox2.Name = "vbox2";
+		this.vbox2.Spacing = 6;
+		// Container child vbox2.Gtk.Box+BoxChild
+		this.hbox13 = new global::Gtk.HBox ();
+		this.hbox13.Name = "hbox13";
+		this.hbox13.Spacing = 6;
+		// Container child hbox13.Gtk.Box+BoxChild
+		this.Archery_Label = new global::Gtk.Label ();
+		this.Archery_Label.Name = "Archery_Label";
+		this.Archery_Label.LabelProp = global::Mono.Unix.Catalog.GetString ("Archery");
+		this.hbox13.Add (this.Archery_Label);
+		global::Gtk.Box.BoxChild w43 = ((global::Gtk.Box.BoxChild)(this.hbox13 [this.Archery_Label]));
+		w43.Position = 0;
+		w43.Fill = false;
+		// Container child hbox13.Gtk.Box+BoxChild
+		this.Archery_Spinbox = new global::Gtk.SpinButton (0, 100, 1);
+		this.Archery_Spinbox.CanFocus = true;
+		this.Archery_Spinbox.Name = "Archery_Spinbox";
+		this.Archery_Spinbox.Adjustment.PageIncrement = 10;
+		this.Archery_Spinbox.ClimbRate = 1;
+		this.Archery_Spinbox.Numeric = true;
+		this.hbox13.Add (this.Archery_Spinbox);
+		global::Gtk.Box.BoxChild w44 = ((global::Gtk.Box.BoxChild)(this.hbox13 [this.Archery_Spinbox]));
+		w44.Position = 1;
+		w44.Expand = false;
+		w44.Fill = false;
+		this.vbox2.Add (this.hbox13);
+		global::Gtk.Box.BoxChild w45 = ((global::Gtk.Box.BoxChild)(this.vbox2 [this.hbox13]));
 		w45.Position = 0;
 		w45.Expand = false;
 		w45.Fill = false;
+		// Container child vbox2.Gtk.Box+BoxChild
+		this.hbox14 = new global::Gtk.HBox ();
+		this.hbox14.Name = "hbox14";
+		this.hbox14.Spacing = 6;
+		// Container child hbox14.Gtk.Box+BoxChild
+		this.Automatics_Label = new global::Gtk.Label ();
+		this.Automatics_Label.Name = "Automatics_Label";
+		this.Automatics_Label.LabelProp = global::Mono.Unix.Catalog.GetString ("Automatics");
+		this.hbox14.Add (this.Automatics_Label);
+		global::Gtk.Box.BoxChild w46 = ((global::Gtk.Box.BoxChild)(this.hbox14 [this.Automatics_Label]));
+		w46.Position = 0;
+		w46.Fill = false;
+		// Container child hbox14.Gtk.Box+BoxChild
+		this.AutomaticsSpinbox = new global::Gtk.SpinButton (0, 100, 1);
+		this.AutomaticsSpinbox.CanFocus = true;
+		this.AutomaticsSpinbox.Name = "AutomaticsSpinbox";
+		this.AutomaticsSpinbox.Adjustment.PageIncrement = 10;
+		this.AutomaticsSpinbox.ClimbRate = 1;
+		this.AutomaticsSpinbox.Numeric = true;
+		this.hbox14.Add (this.AutomaticsSpinbox);
+		global::Gtk.Box.BoxChild w47 = ((global::Gtk.Box.BoxChild)(this.hbox14 [this.AutomaticsSpinbox]));
+		w47.Position = 1;
+		w47.Expand = false;
+		w47.Fill = false;
+		this.vbox2.Add (this.hbox14);
+		global::Gtk.Box.BoxChild w48 = ((global::Gtk.Box.BoxChild)(this.vbox2 [this.hbox14]));
+		w48.Position = 1;
+		w48.Expand = false;
+		w48.Fill = false;
+		// Container child vbox2.Gtk.Box+BoxChild
+		this.hbox15 = new global::Gtk.HBox ();
+		this.hbox15.Name = "hbox15";
+		this.hbox15.Spacing = 6;
+		// Container child hbox15.Gtk.Box+BoxChild
+		this.Blades_Label = new global::Gtk.Label ();
+		this.Blades_Label.Name = "Blades_Label";
+		this.Blades_Label.LabelProp = global::Mono.Unix.Catalog.GetString ("Blades");
+		this.hbox15.Add (this.Blades_Label);
+		global::Gtk.Box.BoxChild w49 = ((global::Gtk.Box.BoxChild)(this.hbox15 [this.Blades_Label]));
+		w49.Position = 0;
+		w49.Fill = false;
+		// Container child hbox15.Gtk.Box+BoxChild
+		this.Blades_Spinbox = new global::Gtk.SpinButton (0, 100, 1);
+		this.Blades_Spinbox.CanFocus = true;
+		this.Blades_Spinbox.Name = "Blades_Spinbox";
+		this.Blades_Spinbox.Adjustment.PageIncrement = 10;
+		this.Blades_Spinbox.ClimbRate = 1;
+		this.Blades_Spinbox.Numeric = true;
+		this.hbox15.Add (this.Blades_Spinbox);
+		global::Gtk.Box.BoxChild w50 = ((global::Gtk.Box.BoxChild)(this.hbox15 [this.Blades_Spinbox]));
+		w50.Position = 1;
+		w50.Expand = false;
+		w50.Fill = false;
+		this.vbox2.Add (this.hbox15);
+		global::Gtk.Box.BoxChild w51 = ((global::Gtk.Box.BoxChild)(this.vbox2 [this.hbox15]));
+		w51.Position = 2;
+		w51.Expand = false;
+		w51.Fill = false;
+		// Container child vbox2.Gtk.Box+BoxChild
+		this.hbox16 = new global::Gtk.HBox ();
+		this.hbox16.Name = "hbox16";
+		this.hbox16.Spacing = 6;
+		// Container child hbox16.Gtk.Box+BoxChild
+		this.Clubs_Label = new global::Gtk.Label ();
+		this.Clubs_Label.Name = "Clubs_Label";
+		this.Clubs_Label.LabelProp = global::Mono.Unix.Catalog.GetString ("Clubs");
+		this.hbox16.Add (this.Clubs_Label);
+		global::Gtk.Box.BoxChild w52 = ((global::Gtk.Box.BoxChild)(this.hbox16 [this.Clubs_Label]));
+		w52.Position = 0;
+		w52.Fill = false;
+		// Container child hbox16.Gtk.Box+BoxChild
+		this.Clubs_Spinbox = new global::Gtk.SpinButton (0, 100, 1);
+		this.Clubs_Spinbox.CanFocus = true;
+		this.Clubs_Spinbox.Name = "Clubs_Spinbox";
+		this.Clubs_Spinbox.Adjustment.PageIncrement = 10;
+		this.Clubs_Spinbox.ClimbRate = 1;
+		this.Clubs_Spinbox.Numeric = true;
+		this.hbox16.Add (this.Clubs_Spinbox);
+		global::Gtk.Box.BoxChild w53 = ((global::Gtk.Box.BoxChild)(this.hbox16 [this.Clubs_Spinbox]));
+		w53.Position = 1;
+		w53.Expand = false;
+		w53.Fill = false;
+		this.vbox2.Add (this.hbox16);
+		global::Gtk.Box.BoxChild w54 = ((global::Gtk.Box.BoxChild)(this.vbox2 [this.hbox16]));
+		w54.Position = 3;
+		w54.Expand = false;
+		w54.Fill = false;
+		// Container child vbox2.Gtk.Box+BoxChild
+		this.hbox17 = new global::Gtk.HBox ();
+		this.hbox17.Name = "hbox17";
+		this.hbox17.Spacing = 6;
+		// Container child hbox17.Gtk.Box+BoxChild
+		this.HeavyWeapons_Label = new global::Gtk.Label ();
+		this.HeavyWeapons_Label.Name = "HeavyWeapons_Label";
+		this.HeavyWeapons_Label.LabelProp = global::Mono.Unix.Catalog.GetString ("Heavy Weapons");
+		this.hbox17.Add (this.HeavyWeapons_Label);
+		global::Gtk.Box.BoxChild w55 = ((global::Gtk.Box.BoxChild)(this.hbox17 [this.HeavyWeapons_Label]));
+		w55.Position = 0;
+		w55.Fill = false;
+		// Container child hbox17.Gtk.Box+BoxChild
+		this.HeavyWeapons_Spinbox = new global::Gtk.SpinButton (0, 100, 1);
+		this.HeavyWeapons_Spinbox.CanFocus = true;
+		this.HeavyWeapons_Spinbox.Name = "HeavyWeapons_Spinbox";
+		this.HeavyWeapons_Spinbox.Adjustment.PageIncrement = 10;
+		this.HeavyWeapons_Spinbox.ClimbRate = 1;
+		this.HeavyWeapons_Spinbox.Numeric = true;
+		this.hbox17.Add (this.HeavyWeapons_Spinbox);
+		global::Gtk.Box.BoxChild w56 = ((global::Gtk.Box.BoxChild)(this.hbox17 [this.HeavyWeapons_Spinbox]));
+		w56.Position = 1;
+		w56.Expand = false;
+		w56.Fill = false;
+		this.vbox2.Add (this.hbox17);
+		global::Gtk.Box.BoxChild w57 = ((global::Gtk.Box.BoxChild)(this.vbox2 [this.hbox17]));
+		w57.Position = 4;
+		w57.Expand = false;
+		w57.Fill = false;
+		// Container child vbox2.Gtk.Box+BoxChild
+		this.hbox18 = new global::Gtk.HBox ();
+		this.hbox18.Name = "hbox18";
+		this.hbox18.Spacing = 6;
+		// Container child hbox18.Gtk.Box+BoxChild
+		this.Longarms_Label = new global::Gtk.Label ();
+		this.Longarms_Label.Name = "Longarms_Label";
+		this.Longarms_Label.LabelProp = global::Mono.Unix.Catalog.GetString ("Longarms");
+		this.hbox18.Add (this.Longarms_Label);
+		global::Gtk.Box.BoxChild w58 = ((global::Gtk.Box.BoxChild)(this.hbox18 [this.Longarms_Label]));
+		w58.Position = 0;
+		w58.Fill = false;
+		// Container child hbox18.Gtk.Box+BoxChild
+		this.Longarms_Spinbox = new global::Gtk.SpinButton (0, 100, 1);
+		this.Longarms_Spinbox.CanFocus = true;
+		this.Longarms_Spinbox.Name = "Longarms_Spinbox";
+		this.Longarms_Spinbox.Adjustment.PageIncrement = 10;
+		this.Longarms_Spinbox.ClimbRate = 1;
+		this.Longarms_Spinbox.Numeric = true;
+		this.hbox18.Add (this.Longarms_Spinbox);
+		global::Gtk.Box.BoxChild w59 = ((global::Gtk.Box.BoxChild)(this.hbox18 [this.Longarms_Spinbox]));
+		w59.Position = 1;
+		w59.Expand = false;
+		w59.Fill = false;
+		this.vbox2.Add (this.hbox18);
+		global::Gtk.Box.BoxChild w60 = ((global::Gtk.Box.BoxChild)(this.vbox2 [this.hbox18]));
+		w60.Position = 5;
+		w60.Expand = false;
+		w60.Fill = false;
+		// Container child vbox2.Gtk.Box+BoxChild
+		this.hbox19 = new global::Gtk.HBox ();
+		this.hbox19.Name = "hbox19";
+		this.hbox19.Spacing = 6;
+		// Container child hbox19.Gtk.Box+BoxChild
+		this.Pistols_Label = new global::Gtk.Label ();
+		this.Pistols_Label.Name = "Pistols_Label";
+		this.Pistols_Label.LabelProp = global::Mono.Unix.Catalog.GetString ("Pistols");
+		this.hbox19.Add (this.Pistols_Label);
+		global::Gtk.Box.BoxChild w61 = ((global::Gtk.Box.BoxChild)(this.hbox19 [this.Pistols_Label]));
+		w61.Position = 0;
+		w61.Fill = false;
+		// Container child hbox19.Gtk.Box+BoxChild
+		this.Pistols_Spinbox = new global::Gtk.SpinButton (0, 100, 1);
+		this.Pistols_Spinbox.CanFocus = true;
+		this.Pistols_Spinbox.Name = "Pistols_Spinbox";
+		this.Pistols_Spinbox.Adjustment.PageIncrement = 10;
+		this.Pistols_Spinbox.ClimbRate = 1;
+		this.Pistols_Spinbox.Numeric = true;
+		this.hbox19.Add (this.Pistols_Spinbox);
+		global::Gtk.Box.BoxChild w62 = ((global::Gtk.Box.BoxChild)(this.hbox19 [this.Pistols_Spinbox]));
+		w62.Position = 1;
+		w62.Expand = false;
+		w62.Fill = false;
+		this.vbox2.Add (this.hbox19);
+		global::Gtk.Box.BoxChild w63 = ((global::Gtk.Box.BoxChild)(this.vbox2 [this.hbox19]));
+		w63.Position = 6;
+		w63.Expand = false;
+		w63.Fill = false;
+		// Container child vbox2.Gtk.Box+BoxChild
+		this.hbox20 = new global::Gtk.HBox ();
+		this.hbox20.Name = "hbox20";
+		this.hbox20.Spacing = 6;
+		// Container child hbox20.Gtk.Box+BoxChild
+		this.ThrowingWeapons_Label = new global::Gtk.Label ();
+		this.ThrowingWeapons_Label.Name = "ThrowingWeapons_Label";
+		this.ThrowingWeapons_Label.LabelProp = global::Mono.Unix.Catalog.GetString ("Throwing Weapons");
+		this.hbox20.Add (this.ThrowingWeapons_Label);
+		global::Gtk.Box.BoxChild w64 = ((global::Gtk.Box.BoxChild)(this.hbox20 [this.ThrowingWeapons_Label]));
+		w64.Position = 0;
+		w64.Fill = false;
+		// Container child hbox20.Gtk.Box+BoxChild
+		this.ThrowingWeapons_Spinbox = new global::Gtk.SpinButton (0, 100, 1);
+		this.ThrowingWeapons_Spinbox.CanFocus = true;
+		this.ThrowingWeapons_Spinbox.Name = "ThrowingWeapons_Spinbox";
+		this.ThrowingWeapons_Spinbox.Adjustment.PageIncrement = 10;
+		this.ThrowingWeapons_Spinbox.ClimbRate = 1;
+		this.ThrowingWeapons_Spinbox.Numeric = true;
+		this.hbox20.Add (this.ThrowingWeapons_Spinbox);
+		global::Gtk.Box.BoxChild w65 = ((global::Gtk.Box.BoxChild)(this.hbox20 [this.ThrowingWeapons_Spinbox]));
+		w65.Position = 1;
+		w65.Expand = false;
+		w65.Fill = false;
+		this.vbox2.Add (this.hbox20);
+		global::Gtk.Box.BoxChild w66 = ((global::Gtk.Box.BoxChild)(this.vbox2 [this.hbox20]));
+		w66.Position = 7;
+		w66.Expand = false;
+		w66.Fill = false;
+		// Container child vbox2.Gtk.Box+BoxChild
+		this.hbox = new global::Gtk.HBox ();
+		this.hbox.Name = "hbox";
+		this.hbox.Spacing = 6;
+		// Container child hbox.Gtk.Box+BoxChild
+		this.UnarmedCombat_Label = new global::Gtk.Label ();
+		this.UnarmedCombat_Label.Name = "UnarmedCombat_Label";
+		this.UnarmedCombat_Label.LabelProp = global::Mono.Unix.Catalog.GetString ("Unarmed Combat");
+		this.hbox.Add (this.UnarmedCombat_Label);
+		global::Gtk.Box.BoxChild w67 = ((global::Gtk.Box.BoxChild)(this.hbox [this.UnarmedCombat_Label]));
+		w67.Position = 0;
+		w67.Fill = false;
+		// Container child hbox.Gtk.Box+BoxChild
+		this.UnarmedCombat_Spinbox = new global::Gtk.SpinButton (0, 100, 1);
+		this.UnarmedCombat_Spinbox.CanFocus = true;
+		this.UnarmedCombat_Spinbox.Name = "UnarmedCombat_Spinbox";
+		this.UnarmedCombat_Spinbox.Adjustment.PageIncrement = 10;
+		this.UnarmedCombat_Spinbox.ClimbRate = 1;
+		this.UnarmedCombat_Spinbox.Numeric = true;
+		this.hbox.Add (this.UnarmedCombat_Spinbox);
+		global::Gtk.Box.BoxChild w68 = ((global::Gtk.Box.BoxChild)(this.hbox [this.UnarmedCombat_Spinbox]));
+		w68.Position = 1;
+		w68.Expand = false;
+		w68.Fill = false;
+		this.vbox2.Add (this.hbox);
+		global::Gtk.Box.BoxChild w69 = ((global::Gtk.Box.BoxChild)(this.vbox2 [this.hbox]));
+		w69.Position = 8;
+		w69.Expand = false;
+		w69.Fill = false;
+		this.GtkAlignment3.Add (this.vbox2);
+		this.Skills_Frame.Add (this.GtkAlignment3);
+		this.SkillsFrame_Label = new global::Gtk.Label ();
+		this.SkillsFrame_Label.Name = "SkillsFrame_Label";
+		this.SkillsFrame_Label.LabelProp = global::Mono.Unix.Catalog.GetString ("<b>Combat Skills</b>");
+		this.SkillsFrame_Label.UseMarkup = true;
+		this.Skills_Frame.LabelWidget = this.SkillsFrame_Label;
+		this.Character_Pane.Add (this.Skills_Frame);
+		global::Gtk.Box.BoxChild w72 = ((global::Gtk.Box.BoxChild)(this.Character_Pane [this.Skills_Frame]));
+		w72.Position = 1;
+		w72.Expand = false;
 		// Container child Character_Pane.Gtk.Box+BoxChild
 		this.Weapons_Frame = new global::Gtk.Frame ();
 		this.Weapons_Frame.Name = "Weapons_Frame";
@@ -552,10 +859,10 @@ public partial class ShadowrunToolMainWindow
 		this.RangedWeapon_Label.LabelProp = global::Mono.Unix.Catalog.GetString ("<b>Ranged Weapon</b>");
 		this.RangedWeapon_Label.UseMarkup = true;
 		this.Weapons_Vbox.Add (this.RangedWeapon_Label);
-		global::Gtk.Box.BoxChild w46 = ((global::Gtk.Box.BoxChild)(this.Weapons_Vbox [this.RangedWeapon_Label]));
-		w46.Position = 0;
-		w46.Expand = false;
-		w46.Fill = false;
+		global::Gtk.Box.BoxChild w73 = ((global::Gtk.Box.BoxChild)(this.Weapons_Vbox [this.RangedWeapon_Label]));
+		w73.Position = 0;
+		w73.Expand = false;
+		w73.Fill = false;
 		// Container child Weapons_Vbox.Gtk.Box+BoxChild
 		this.hbox10 = new global::Gtk.HBox ();
 		this.hbox10.Name = "hbox10";
@@ -565,9 +872,9 @@ public partial class ShadowrunToolMainWindow
 		this.RangedWeaponName_Label.Name = "RangedWeaponName_Label";
 		this.RangedWeaponName_Label.LabelProp = global::Mono.Unix.Catalog.GetString ("Name");
 		this.hbox10.Add (this.RangedWeaponName_Label);
-		global::Gtk.Box.BoxChild w47 = ((global::Gtk.Box.BoxChild)(this.hbox10 [this.RangedWeaponName_Label]));
-		w47.Position = 0;
-		w47.Fill = false;
+		global::Gtk.Box.BoxChild w74 = ((global::Gtk.Box.BoxChild)(this.hbox10 [this.RangedWeaponName_Label]));
+		w74.Position = 0;
+		w74.Fill = false;
 		// Container child hbox10.Gtk.Box+BoxChild
 		this.RangedWeaponName_Textbox = new global::Gtk.Entry ();
 		this.RangedWeaponName_Textbox.CanFocus = true;
@@ -575,14 +882,14 @@ public partial class ShadowrunToolMainWindow
 		this.RangedWeaponName_Textbox.IsEditable = true;
 		this.RangedWeaponName_Textbox.InvisibleChar = '●';
 		this.hbox10.Add (this.RangedWeaponName_Textbox);
-		global::Gtk.Box.BoxChild w48 = ((global::Gtk.Box.BoxChild)(this.hbox10 [this.RangedWeaponName_Textbox]));
-		w48.Position = 1;
-		w48.Expand = false;
+		global::Gtk.Box.BoxChild w75 = ((global::Gtk.Box.BoxChild)(this.hbox10 [this.RangedWeaponName_Textbox]));
+		w75.Position = 1;
+		w75.Expand = false;
 		this.Weapons_Vbox.Add (this.hbox10);
-		global::Gtk.Box.BoxChild w49 = ((global::Gtk.Box.BoxChild)(this.Weapons_Vbox [this.hbox10]));
-		w49.Position = 1;
-		w49.Expand = false;
-		w49.Fill = false;
+		global::Gtk.Box.BoxChild w76 = ((global::Gtk.Box.BoxChild)(this.Weapons_Vbox [this.hbox10]));
+		w76.Position = 1;
+		w76.Expand = false;
+		w76.Fill = false;
 		// Container child Weapons_Vbox.Gtk.Box+BoxChild
 		this.hbox55 = new global::Gtk.HBox ();
 		this.hbox55.Name = "hbox55";
@@ -592,9 +899,9 @@ public partial class ShadowrunToolMainWindow
 		this.RangedDamage_Label1.Name = "RangedDamage_Label1";
 		this.RangedDamage_Label1.LabelProp = global::Mono.Unix.Catalog.GetString ("Damage");
 		this.hbox55.Add (this.RangedDamage_Label1);
-		global::Gtk.Box.BoxChild w50 = ((global::Gtk.Box.BoxChild)(this.hbox55 [this.RangedDamage_Label1]));
-		w50.Position = 0;
-		w50.Fill = false;
+		global::Gtk.Box.BoxChild w77 = ((global::Gtk.Box.BoxChild)(this.hbox55 [this.RangedDamage_Label1]));
+		w77.Position = 0;
+		w77.Fill = false;
 		// Container child hbox55.Gtk.Box+BoxChild
 		this.RangedDamage_Textbox = new global::Gtk.Entry ();
 		this.RangedDamage_Textbox.CanFocus = true;
@@ -602,14 +909,14 @@ public partial class ShadowrunToolMainWindow
 		this.RangedDamage_Textbox.IsEditable = true;
 		this.RangedDamage_Textbox.InvisibleChar = '●';
 		this.hbox55.Add (this.RangedDamage_Textbox);
-		global::Gtk.Box.BoxChild w51 = ((global::Gtk.Box.BoxChild)(this.hbox55 [this.RangedDamage_Textbox]));
-		w51.Position = 1;
-		w51.Expand = false;
+		global::Gtk.Box.BoxChild w78 = ((global::Gtk.Box.BoxChild)(this.hbox55 [this.RangedDamage_Textbox]));
+		w78.Position = 1;
+		w78.Expand = false;
 		this.Weapons_Vbox.Add (this.hbox55);
-		global::Gtk.Box.BoxChild w52 = ((global::Gtk.Box.BoxChild)(this.Weapons_Vbox [this.hbox55]));
-		w52.Position = 2;
-		w52.Expand = false;
-		w52.Fill = false;
+		global::Gtk.Box.BoxChild w79 = ((global::Gtk.Box.BoxChild)(this.Weapons_Vbox [this.hbox55]));
+		w79.Position = 2;
+		w79.Expand = false;
+		w79.Fill = false;
 		// Container child Weapons_Vbox.Gtk.Box+BoxChild
 		this.hbox59 = new global::Gtk.HBox ();
 		this.hbox59.Name = "hbox59";
@@ -619,21 +926,20 @@ public partial class ShadowrunToolMainWindow
 		this.RangedDamage_Label.Name = "RangedDamage_Label";
 		this.RangedDamage_Label.LabelProp = global::Mono.Unix.Catalog.GetString ("Type");
 		this.hbox59.Add (this.RangedDamage_Label);
-		global::Gtk.Box.BoxChild w53 = ((global::Gtk.Box.BoxChild)(this.hbox59 [this.RangedDamage_Label]));
-		w53.Position = 0;
-		w53.Fill = false;
+		global::Gtk.Box.BoxChild w80 = ((global::Gtk.Box.BoxChild)(this.hbox59 [this.RangedDamage_Label]));
+		w80.Position = 0;
+		w80.Fill = false;
 		// Container child hbox59.Gtk.Box+BoxChild
 		this.RangedPhysicalDamage_Radio = new global::Gtk.RadioButton (global::Mono.Unix.Catalog.GetString ("Physical"));
 		this.RangedPhysicalDamage_Radio.CanFocus = true;
 		this.RangedPhysicalDamage_Radio.Name = "RangedPhysicalDamage_Radio";
-		this.RangedPhysicalDamage_Radio.Active = true;
 		this.RangedPhysicalDamage_Radio.DrawIndicator = true;
 		this.RangedPhysicalDamage_Radio.UseUnderline = true;
 		this.RangedPhysicalDamage_Radio.Group = new global::GLib.SList (global::System.IntPtr.Zero);
 		this.hbox59.Add (this.RangedPhysicalDamage_Radio);
-		global::Gtk.Box.BoxChild w54 = ((global::Gtk.Box.BoxChild)(this.hbox59 [this.RangedPhysicalDamage_Radio]));
-		w54.Position = 1;
-		w54.Expand = false;
+		global::Gtk.Box.BoxChild w81 = ((global::Gtk.Box.BoxChild)(this.hbox59 [this.RangedPhysicalDamage_Radio]));
+		w81.Position = 1;
+		w81.Expand = false;
 		// Container child hbox59.Gtk.Box+BoxChild
 		this.RangedStunDamage_Radio = new global::Gtk.RadioButton (global::Mono.Unix.Catalog.GetString ("Stun"));
 		this.RangedStunDamage_Radio.CanFocus = true;
@@ -642,14 +948,14 @@ public partial class ShadowrunToolMainWindow
 		this.RangedStunDamage_Radio.UseUnderline = true;
 		this.RangedStunDamage_Radio.Group = this.RangedPhysicalDamage_Radio.Group;
 		this.hbox59.Add (this.RangedStunDamage_Radio);
-		global::Gtk.Box.BoxChild w55 = ((global::Gtk.Box.BoxChild)(this.hbox59 [this.RangedStunDamage_Radio]));
-		w55.Position = 2;
-		w55.Expand = false;
+		global::Gtk.Box.BoxChild w82 = ((global::Gtk.Box.BoxChild)(this.hbox59 [this.RangedStunDamage_Radio]));
+		w82.Position = 2;
+		w82.Expand = false;
 		this.Weapons_Vbox.Add (this.hbox59);
-		global::Gtk.Box.BoxChild w56 = ((global::Gtk.Box.BoxChild)(this.Weapons_Vbox [this.hbox59]));
-		w56.Position = 3;
-		w56.Expand = false;
-		w56.Fill = false;
+		global::Gtk.Box.BoxChild w83 = ((global::Gtk.Box.BoxChild)(this.Weapons_Vbox [this.hbox59]));
+		w83.Position = 3;
+		w83.Expand = false;
+		w83.Fill = false;
 		// Container child Weapons_Vbox.Gtk.Box+BoxChild
 		this.hbox57 = new global::Gtk.HBox ();
 		this.hbox57.Name = "hbox57";
@@ -659,9 +965,9 @@ public partial class ShadowrunToolMainWindow
 		this.RangedAccuracy.Name = "RangedAccuracy";
 		this.RangedAccuracy.LabelProp = global::Mono.Unix.Catalog.GetString ("Accuracy");
 		this.hbox57.Add (this.RangedAccuracy);
-		global::Gtk.Box.BoxChild w57 = ((global::Gtk.Box.BoxChild)(this.hbox57 [this.RangedAccuracy]));
-		w57.Position = 0;
-		w57.Fill = false;
+		global::Gtk.Box.BoxChild w84 = ((global::Gtk.Box.BoxChild)(this.hbox57 [this.RangedAccuracy]));
+		w84.Position = 0;
+		w84.Fill = false;
 		// Container child hbox57.Gtk.Box+BoxChild
 		this.RangedAccuracy_Textbox = new global::Gtk.Entry ();
 		this.RangedAccuracy_Textbox.CanFocus = true;
@@ -669,14 +975,14 @@ public partial class ShadowrunToolMainWindow
 		this.RangedAccuracy_Textbox.IsEditable = true;
 		this.RangedAccuracy_Textbox.InvisibleChar = '●';
 		this.hbox57.Add (this.RangedAccuracy_Textbox);
-		global::Gtk.Box.BoxChild w58 = ((global::Gtk.Box.BoxChild)(this.hbox57 [this.RangedAccuracy_Textbox]));
-		w58.Position = 1;
-		w58.Expand = false;
+		global::Gtk.Box.BoxChild w85 = ((global::Gtk.Box.BoxChild)(this.hbox57 [this.RangedAccuracy_Textbox]));
+		w85.Position = 1;
+		w85.Expand = false;
 		this.Weapons_Vbox.Add (this.hbox57);
-		global::Gtk.Box.BoxChild w59 = ((global::Gtk.Box.BoxChild)(this.Weapons_Vbox [this.hbox57]));
-		w59.Position = 4;
-		w59.Expand = false;
-		w59.Fill = false;
+		global::Gtk.Box.BoxChild w86 = ((global::Gtk.Box.BoxChild)(this.Weapons_Vbox [this.hbox57]));
+		w86.Position = 4;
+		w86.Expand = false;
+		w86.Fill = false;
 		// Container child Weapons_Vbox.Gtk.Box+BoxChild
 		this.hbox58 = new global::Gtk.HBox ();
 		this.hbox58.Name = "hbox58";
@@ -686,9 +992,9 @@ public partial class ShadowrunToolMainWindow
 		this.RangedAP_Label.Name = "RangedAP_Label";
 		this.RangedAP_Label.LabelProp = global::Mono.Unix.Catalog.GetString ("AP");
 		this.hbox58.Add (this.RangedAP_Label);
-		global::Gtk.Box.BoxChild w60 = ((global::Gtk.Box.BoxChild)(this.hbox58 [this.RangedAP_Label]));
-		w60.Position = 0;
-		w60.Fill = false;
+		global::Gtk.Box.BoxChild w87 = ((global::Gtk.Box.BoxChild)(this.hbox58 [this.RangedAP_Label]));
+		w87.Position = 0;
+		w87.Fill = false;
 		// Container child hbox58.Gtk.Box+BoxChild
 		this.RangedWeaponAP_Textbox = new global::Gtk.Entry ();
 		this.RangedWeaponAP_Textbox.CanFocus = true;
@@ -696,14 +1002,14 @@ public partial class ShadowrunToolMainWindow
 		this.RangedWeaponAP_Textbox.IsEditable = true;
 		this.RangedWeaponAP_Textbox.InvisibleChar = '●';
 		this.hbox58.Add (this.RangedWeaponAP_Textbox);
-		global::Gtk.Box.BoxChild w61 = ((global::Gtk.Box.BoxChild)(this.hbox58 [this.RangedWeaponAP_Textbox]));
-		w61.Position = 1;
-		w61.Expand = false;
+		global::Gtk.Box.BoxChild w88 = ((global::Gtk.Box.BoxChild)(this.hbox58 [this.RangedWeaponAP_Textbox]));
+		w88.Position = 1;
+		w88.Expand = false;
 		this.Weapons_Vbox.Add (this.hbox58);
-		global::Gtk.Box.BoxChild w62 = ((global::Gtk.Box.BoxChild)(this.Weapons_Vbox [this.hbox58]));
-		w62.Position = 5;
-		w62.Expand = false;
-		w62.Fill = false;
+		global::Gtk.Box.BoxChild w89 = ((global::Gtk.Box.BoxChild)(this.Weapons_Vbox [this.hbox58]));
+		w89.Position = 5;
+		w89.Expand = false;
+		w89.Fill = false;
 		// Container child Weapons_Vbox.Gtk.Box+BoxChild
 		this.hbox11 = new global::Gtk.HBox ();
 		this.hbox11.Name = "hbox11";
@@ -713,9 +1019,9 @@ public partial class ShadowrunToolMainWindow
 		this.RangedRecoil_Label.Name = "RangedRecoil_Label";
 		this.RangedRecoil_Label.LabelProp = global::Mono.Unix.Catalog.GetString ("Recoil");
 		this.hbox11.Add (this.RangedRecoil_Label);
-		global::Gtk.Box.BoxChild w63 = ((global::Gtk.Box.BoxChild)(this.hbox11 [this.RangedRecoil_Label]));
-		w63.Position = 0;
-		w63.Fill = false;
+		global::Gtk.Box.BoxChild w90 = ((global::Gtk.Box.BoxChild)(this.hbox11 [this.RangedRecoil_Label]));
+		w90.Position = 0;
+		w90.Fill = false;
 		// Container child hbox11.Gtk.Box+BoxChild
 		this.RangedRecoil_Textbox = new global::Gtk.Entry ();
 		this.RangedRecoil_Textbox.CanFocus = true;
@@ -723,25 +1029,23 @@ public partial class ShadowrunToolMainWindow
 		this.RangedRecoil_Textbox.IsEditable = true;
 		this.RangedRecoil_Textbox.InvisibleChar = '●';
 		this.hbox11.Add (this.RangedRecoil_Textbox);
-		global::Gtk.Box.BoxChild w64 = ((global::Gtk.Box.BoxChild)(this.hbox11 [this.RangedRecoil_Textbox]));
-		w64.Position = 1;
-		w64.Expand = false;
+		global::Gtk.Box.BoxChild w91 = ((global::Gtk.Box.BoxChild)(this.hbox11 [this.RangedRecoil_Textbox]));
+		w91.Position = 1;
+		w91.Expand = false;
 		this.Weapons_Vbox.Add (this.hbox11);
-		global::Gtk.Box.BoxChild w65 = ((global::Gtk.Box.BoxChild)(this.Weapons_Vbox [this.hbox11]));
-		w65.Position = 6;
-		w65.Expand = false;
-		w65.Fill = false;
+		global::Gtk.Box.BoxChild w92 = ((global::Gtk.Box.BoxChild)(this.Weapons_Vbox [this.hbox11]));
+		w92.Position = 6;
+		w92.Expand = false;
+		w92.Fill = false;
 		// Container child Weapons_Vbox.Gtk.Box+BoxChild
-		this.FiringModesSupported_Label = new global::Gtk.Label ();
-		this.FiringModesSupported_Label.Name = "FiringModesSupported_Label";
-		this.FiringModesSupported_Label.LabelProp = global::Mono.Unix.Catalog.GetString ("Firing Modes");
-		this.FiringModesSupported_Label.Justify = ((global::Gtk.Justification)(2));
-		this.Weapons_Vbox.Add (this.FiringModesSupported_Label);
-		global::Gtk.Box.BoxChild w66 = ((global::Gtk.Box.BoxChild)(this.Weapons_Vbox [this.FiringModesSupported_Label]));
-		w66.Position = 7;
-		w66.Expand = false;
-		w66.Fill = false;
-		// Container child Weapons_Vbox.Gtk.Box+BoxChild
+		this.FiringModes_Expander = new global::Gtk.Expander (null);
+		this.FiringModes_Expander.CanFocus = true;
+		this.FiringModes_Expander.Name = "FiringModes_Expander";
+		// Container child FiringModes_Expander.Gtk.Container+ContainerChild
+		this.vbox3 = new global::Gtk.VBox ();
+		this.vbox3.Name = "vbox3";
+		this.vbox3.Spacing = 6;
+		// Container child vbox3.Gtk.Box+BoxChild
 		this.hbox60 = new global::Gtk.HBox ();
 		this.hbox60.Name = "hbox60";
 		this.hbox60.Spacing = 6;
@@ -753,8 +1057,8 @@ public partial class ShadowrunToolMainWindow
 		this.SingleShot_Checkbox.DrawIndicator = true;
 		this.SingleShot_Checkbox.UseUnderline = true;
 		this.hbox60.Add (this.SingleShot_Checkbox);
-		global::Gtk.Box.BoxChild w67 = ((global::Gtk.Box.BoxChild)(this.hbox60 [this.SingleShot_Checkbox]));
-		w67.Position = 0;
+		global::Gtk.Box.BoxChild w93 = ((global::Gtk.Box.BoxChild)(this.hbox60 [this.SingleShot_Checkbox]));
+		w93.Position = 0;
 		// Container child hbox60.Gtk.Box+BoxChild
 		this.SemiAutomatic_Checkbox = new global::Gtk.CheckButton ();
 		this.SemiAutomatic_Checkbox.CanFocus = true;
@@ -763,14 +1067,14 @@ public partial class ShadowrunToolMainWindow
 		this.SemiAutomatic_Checkbox.DrawIndicator = true;
 		this.SemiAutomatic_Checkbox.UseUnderline = true;
 		this.hbox60.Add (this.SemiAutomatic_Checkbox);
-		global::Gtk.Box.BoxChild w68 = ((global::Gtk.Box.BoxChild)(this.hbox60 [this.SemiAutomatic_Checkbox]));
-		w68.Position = 1;
-		this.Weapons_Vbox.Add (this.hbox60);
-		global::Gtk.Box.BoxChild w69 = ((global::Gtk.Box.BoxChild)(this.Weapons_Vbox [this.hbox60]));
-		w69.Position = 8;
-		w69.Expand = false;
-		w69.Fill = false;
-		// Container child Weapons_Vbox.Gtk.Box+BoxChild
+		global::Gtk.Box.BoxChild w94 = ((global::Gtk.Box.BoxChild)(this.hbox60 [this.SemiAutomatic_Checkbox]));
+		w94.Position = 1;
+		this.vbox3.Add (this.hbox60);
+		global::Gtk.Box.BoxChild w95 = ((global::Gtk.Box.BoxChild)(this.vbox3 [this.hbox60]));
+		w95.Position = 0;
+		w95.Expand = false;
+		w95.Fill = false;
+		// Container child vbox3.Gtk.Box+BoxChild
 		this.hbox61 = new global::Gtk.HBox ();
 		this.hbox61.Name = "hbox61";
 		this.hbox61.Spacing = 6;
@@ -782,8 +1086,8 @@ public partial class ShadowrunToolMainWindow
 		this.SemiAutomaticBurst_Checkbox.DrawIndicator = true;
 		this.SemiAutomaticBurst_Checkbox.UseUnderline = true;
 		this.hbox61.Add (this.SemiAutomaticBurst_Checkbox);
-		global::Gtk.Box.BoxChild w70 = ((global::Gtk.Box.BoxChild)(this.hbox61 [this.SemiAutomaticBurst_Checkbox]));
-		w70.Position = 0;
+		global::Gtk.Box.BoxChild w96 = ((global::Gtk.Box.BoxChild)(this.hbox61 [this.SemiAutomaticBurst_Checkbox]));
+		w96.Position = 0;
 		// Container child hbox61.Gtk.Box+BoxChild
 		this.BurstFire_Checkbox = new global::Gtk.CheckButton ();
 		this.BurstFire_Checkbox.CanFocus = true;
@@ -792,14 +1096,14 @@ public partial class ShadowrunToolMainWindow
 		this.BurstFire_Checkbox.DrawIndicator = true;
 		this.BurstFire_Checkbox.UseUnderline = true;
 		this.hbox61.Add (this.BurstFire_Checkbox);
-		global::Gtk.Box.BoxChild w71 = ((global::Gtk.Box.BoxChild)(this.hbox61 [this.BurstFire_Checkbox]));
-		w71.Position = 1;
-		this.Weapons_Vbox.Add (this.hbox61);
-		global::Gtk.Box.BoxChild w72 = ((global::Gtk.Box.BoxChild)(this.Weapons_Vbox [this.hbox61]));
-		w72.Position = 9;
-		w72.Expand = false;
-		w72.Fill = false;
-		// Container child Weapons_Vbox.Gtk.Box+BoxChild
+		global::Gtk.Box.BoxChild w97 = ((global::Gtk.Box.BoxChild)(this.hbox61 [this.BurstFire_Checkbox]));
+		w97.Position = 1;
+		this.vbox3.Add (this.hbox61);
+		global::Gtk.Box.BoxChild w98 = ((global::Gtk.Box.BoxChild)(this.vbox3 [this.hbox61]));
+		w98.Position = 1;
+		w98.Expand = false;
+		w98.Fill = false;
+		// Container child vbox3.Gtk.Box+BoxChild
 		this.hbox62 = new global::Gtk.HBox ();
 		this.hbox62.Name = "hbox62";
 		this.hbox62.Spacing = 6;
@@ -811,8 +1115,8 @@ public partial class ShadowrunToolMainWindow
 		this.LongBurst_Checkbox.DrawIndicator = true;
 		this.LongBurst_Checkbox.UseUnderline = true;
 		this.hbox62.Add (this.LongBurst_Checkbox);
-		global::Gtk.Box.BoxChild w73 = ((global::Gtk.Box.BoxChild)(this.hbox62 [this.LongBurst_Checkbox]));
-		w73.Position = 0;
+		global::Gtk.Box.BoxChild w99 = ((global::Gtk.Box.BoxChild)(this.hbox62 [this.LongBurst_Checkbox]));
+		w99.Position = 0;
 		// Container child hbox62.Gtk.Box+BoxChild
 		this.FullAuto_Checkbox = new global::Gtk.CheckButton ();
 		this.FullAuto_Checkbox.CanFocus = true;
@@ -821,13 +1125,133 @@ public partial class ShadowrunToolMainWindow
 		this.FullAuto_Checkbox.DrawIndicator = true;
 		this.FullAuto_Checkbox.UseUnderline = true;
 		this.hbox62.Add (this.FullAuto_Checkbox);
-		global::Gtk.Box.BoxChild w74 = ((global::Gtk.Box.BoxChild)(this.hbox62 [this.FullAuto_Checkbox]));
-		w74.Position = 1;
-		this.Weapons_Vbox.Add (this.hbox62);
-		global::Gtk.Box.BoxChild w75 = ((global::Gtk.Box.BoxChild)(this.Weapons_Vbox [this.hbox62]));
-		w75.Position = 10;
-		w75.Expand = false;
-		w75.Fill = false;
+		global::Gtk.Box.BoxChild w100 = ((global::Gtk.Box.BoxChild)(this.hbox62 [this.FullAuto_Checkbox]));
+		w100.Position = 1;
+		this.vbox3.Add (this.hbox62);
+		global::Gtk.Box.BoxChild w101 = ((global::Gtk.Box.BoxChild)(this.vbox3 [this.hbox62]));
+		w101.Position = 2;
+		w101.Expand = false;
+		w101.Fill = false;
+		this.FiringModes_Expander.Add (this.vbox3);
+		this.FiringModesExpander_Label = new global::Gtk.Label ();
+		this.FiringModesExpander_Label.Name = "FiringModesExpander_Label";
+		this.FiringModesExpander_Label.LabelProp = global::Mono.Unix.Catalog.GetString ("<b>FiringModes</b>");
+		this.FiringModesExpander_Label.UseMarkup = true;
+		this.FiringModesExpander_Label.UseUnderline = true;
+		this.FiringModes_Expander.LabelWidget = this.FiringModesExpander_Label;
+		this.Weapons_Vbox.Add (this.FiringModes_Expander);
+		global::Gtk.Box.BoxChild w103 = ((global::Gtk.Box.BoxChild)(this.Weapons_Vbox [this.FiringModes_Expander]));
+		w103.Position = 7;
+		w103.Expand = false;
+		w103.Fill = false;
+		// Container child Weapons_Vbox.Gtk.Box+BoxChild
+		this.RangedSkill_Expander = new global::Gtk.Expander (null);
+		this.RangedSkill_Expander.CanFocus = true;
+		this.RangedSkill_Expander.Name = "RangedSkill_Expander";
+		// Container child RangedSkill_Expander.Gtk.Container+ContainerChild
+		this.vbox5 = new global::Gtk.VBox ();
+		this.vbox5.Name = "vbox5";
+		this.vbox5.Spacing = 6;
+		// Container child vbox5.Gtk.Box+BoxChild
+		this.hbox21 = new global::Gtk.HBox ();
+		this.hbox21.Name = "hbox21";
+		this.hbox21.Spacing = 6;
+		// Container child hbox21.Gtk.Box+BoxChild
+		this.Archery_Radio = new global::Gtk.RadioButton (global::Mono.Unix.Catalog.GetString ("Archery"));
+		this.Archery_Radio.CanFocus = true;
+		this.Archery_Radio.Name = "Archery_Radio";
+		this.Archery_Radio.DrawIndicator = true;
+		this.Archery_Radio.UseUnderline = true;
+		this.Archery_Radio.Group = new global::GLib.SList (global::System.IntPtr.Zero);
+		this.hbox21.Add (this.Archery_Radio);
+		global::Gtk.Box.BoxChild w104 = ((global::Gtk.Box.BoxChild)(this.hbox21 [this.Archery_Radio]));
+		w104.Position = 0;
+		// Container child hbox21.Gtk.Box+BoxChild
+		this.Automatics_Radio = new global::Gtk.RadioButton (global::Mono.Unix.Catalog.GetString ("Automatics"));
+		this.Automatics_Radio.CanFocus = true;
+		this.Automatics_Radio.Name = "Automatics_Radio";
+		this.Automatics_Radio.DrawIndicator = true;
+		this.Automatics_Radio.UseUnderline = true;
+		this.Automatics_Radio.Group = this.Archery_Radio.Group;
+		this.hbox21.Add (this.Automatics_Radio);
+		global::Gtk.Box.BoxChild w105 = ((global::Gtk.Box.BoxChild)(this.hbox21 [this.Automatics_Radio]));
+		w105.Position = 1;
+		this.vbox5.Add (this.hbox21);
+		global::Gtk.Box.BoxChild w106 = ((global::Gtk.Box.BoxChild)(this.vbox5 [this.hbox21]));
+		w106.Position = 0;
+		w106.Expand = false;
+		w106.Fill = false;
+		// Container child vbox5.Gtk.Box+BoxChild
+		this.hbox22 = new global::Gtk.HBox ();
+		this.hbox22.Name = "hbox22";
+		this.hbox22.Spacing = 6;
+		// Container child hbox22.Gtk.Box+BoxChild
+		this.HeavyWeapons_Radio = new global::Gtk.RadioButton (global::Mono.Unix.Catalog.GetString ("Heavy Weapons"));
+		this.HeavyWeapons_Radio.CanFocus = true;
+		this.HeavyWeapons_Radio.Name = "HeavyWeapons_Radio";
+		this.HeavyWeapons_Radio.DrawIndicator = true;
+		this.HeavyWeapons_Radio.UseUnderline = true;
+		this.HeavyWeapons_Radio.Group = this.Archery_Radio.Group;
+		this.hbox22.Add (this.HeavyWeapons_Radio);
+		global::Gtk.Box.BoxChild w107 = ((global::Gtk.Box.BoxChild)(this.hbox22 [this.HeavyWeapons_Radio]));
+		w107.Position = 0;
+		// Container child hbox22.Gtk.Box+BoxChild
+		this.Longarms_Radio = new global::Gtk.RadioButton (global::Mono.Unix.Catalog.GetString ("Longarms"));
+		this.Longarms_Radio.CanFocus = true;
+		this.Longarms_Radio.Name = "Longarms_Radio";
+		this.Longarms_Radio.DrawIndicator = true;
+		this.Longarms_Radio.UseUnderline = true;
+		this.Longarms_Radio.Group = this.Archery_Radio.Group;
+		this.hbox22.Add (this.Longarms_Radio);
+		global::Gtk.Box.BoxChild w108 = ((global::Gtk.Box.BoxChild)(this.hbox22 [this.Longarms_Radio]));
+		w108.Position = 1;
+		this.vbox5.Add (this.hbox22);
+		global::Gtk.Box.BoxChild w109 = ((global::Gtk.Box.BoxChild)(this.vbox5 [this.hbox22]));
+		w109.Position = 1;
+		w109.Expand = false;
+		w109.Fill = false;
+		// Container child vbox5.Gtk.Box+BoxChild
+		this.hbox23 = new global::Gtk.HBox ();
+		this.hbox23.Name = "hbox23";
+		this.hbox23.Spacing = 6;
+		// Container child hbox23.Gtk.Box+BoxChild
+		this.ThrowingWeapons_Radio = new global::Gtk.RadioButton (global::Mono.Unix.Catalog.GetString ("Throwing Weapons"));
+		this.ThrowingWeapons_Radio.CanFocus = true;
+		this.ThrowingWeapons_Radio.Name = "ThrowingWeapons_Radio";
+		this.ThrowingWeapons_Radio.DrawIndicator = true;
+		this.ThrowingWeapons_Radio.UseUnderline = true;
+		this.ThrowingWeapons_Radio.Group = this.Archery_Radio.Group;
+		this.hbox23.Add (this.ThrowingWeapons_Radio);
+		global::Gtk.Box.BoxChild w110 = ((global::Gtk.Box.BoxChild)(this.hbox23 [this.ThrowingWeapons_Radio]));
+		w110.Position = 0;
+		// Container child hbox23.Gtk.Box+BoxChild
+		this.Pistols_Radio = new global::Gtk.RadioButton (global::Mono.Unix.Catalog.GetString ("Pistols"));
+		this.Pistols_Radio.CanFocus = true;
+		this.Pistols_Radio.Name = "Pistols_Radio";
+		this.Pistols_Radio.DrawIndicator = true;
+		this.Pistols_Radio.UseUnderline = true;
+		this.Pistols_Radio.Group = this.Archery_Radio.Group;
+		this.hbox23.Add (this.Pistols_Radio);
+		global::Gtk.Box.BoxChild w111 = ((global::Gtk.Box.BoxChild)(this.hbox23 [this.Pistols_Radio]));
+		w111.Position = 1;
+		this.vbox5.Add (this.hbox23);
+		global::Gtk.Box.BoxChild w112 = ((global::Gtk.Box.BoxChild)(this.vbox5 [this.hbox23]));
+		w112.PackType = ((global::Gtk.PackType)(1));
+		w112.Position = 2;
+		w112.Expand = false;
+		w112.Fill = false;
+		this.RangedSkill_Expander.Add (this.vbox5);
+		this.RangedSkillExpander_Label = new global::Gtk.Label ();
+		this.RangedSkillExpander_Label.Name = "RangedSkillExpander_Label";
+		this.RangedSkillExpander_Label.LabelProp = global::Mono.Unix.Catalog.GetString ("<b>Related Skill</b>");
+		this.RangedSkillExpander_Label.UseMarkup = true;
+		this.RangedSkillExpander_Label.UseUnderline = true;
+		this.RangedSkill_Expander.LabelWidget = this.RangedSkillExpander_Label;
+		this.Weapons_Vbox.Add (this.RangedSkill_Expander);
+		global::Gtk.Box.BoxChild w114 = ((global::Gtk.Box.BoxChild)(this.Weapons_Vbox [this.RangedSkill_Expander]));
+		w114.Position = 8;
+		w114.Expand = false;
+		w114.Fill = false;
 		// Container child Weapons_Vbox.Gtk.Box+BoxChild
 		this.ImportRanged_Button = new global::Gtk.Button ();
 		this.ImportRanged_Button.CanFocus = true;
@@ -835,28 +1259,28 @@ public partial class ShadowrunToolMainWindow
 		this.ImportRanged_Button.UseUnderline = true;
 		this.ImportRanged_Button.Label = global::Mono.Unix.Catalog.GetString ("Import Ranged Weapon Stats");
 		this.Weapons_Vbox.Add (this.ImportRanged_Button);
-		global::Gtk.Box.BoxChild w76 = ((global::Gtk.Box.BoxChild)(this.Weapons_Vbox [this.ImportRanged_Button]));
-		w76.Position = 11;
-		w76.Expand = false;
-		w76.Fill = false;
+		global::Gtk.Box.BoxChild w115 = ((global::Gtk.Box.BoxChild)(this.Weapons_Vbox [this.ImportRanged_Button]));
+		w115.Position = 9;
+		w115.Expand = false;
+		w115.Fill = false;
 		// Container child Weapons_Vbox.Gtk.Box+BoxChild
 		this.hseparator4 = new global::Gtk.HSeparator ();
 		this.hseparator4.Name = "hseparator4";
 		this.Weapons_Vbox.Add (this.hseparator4);
-		global::Gtk.Box.BoxChild w77 = ((global::Gtk.Box.BoxChild)(this.Weapons_Vbox [this.hseparator4]));
-		w77.Position = 13;
-		w77.Expand = false;
-		w77.Fill = false;
+		global::Gtk.Box.BoxChild w116 = ((global::Gtk.Box.BoxChild)(this.Weapons_Vbox [this.hseparator4]));
+		w116.Position = 10;
+		w116.Expand = false;
+		w116.Fill = false;
 		// Container child Weapons_Vbox.Gtk.Box+BoxChild
 		this.MeleeWeapon_Label = new global::Gtk.Label ();
 		this.MeleeWeapon_Label.Name = "MeleeWeapon_Label";
 		this.MeleeWeapon_Label.LabelProp = global::Mono.Unix.Catalog.GetString ("<b>Melee Weapon</b>");
 		this.MeleeWeapon_Label.UseMarkup = true;
 		this.Weapons_Vbox.Add (this.MeleeWeapon_Label);
-		global::Gtk.Box.BoxChild w78 = ((global::Gtk.Box.BoxChild)(this.Weapons_Vbox [this.MeleeWeapon_Label]));
-		w78.Position = 14;
-		w78.Expand = false;
-		w78.Fill = false;
+		global::Gtk.Box.BoxChild w117 = ((global::Gtk.Box.BoxChild)(this.Weapons_Vbox [this.MeleeWeapon_Label]));
+		w117.Position = 11;
+		w117.Expand = false;
+		w117.Fill = false;
 		// Container child Weapons_Vbox.Gtk.Box+BoxChild
 		this.hbox9 = new global::Gtk.HBox ();
 		this.hbox9.Name = "hbox9";
@@ -866,9 +1290,9 @@ public partial class ShadowrunToolMainWindow
 		this.MeleeWeaponName_Label.Name = "MeleeWeaponName_Label";
 		this.MeleeWeaponName_Label.LabelProp = global::Mono.Unix.Catalog.GetString ("Name");
 		this.hbox9.Add (this.MeleeWeaponName_Label);
-		global::Gtk.Box.BoxChild w79 = ((global::Gtk.Box.BoxChild)(this.hbox9 [this.MeleeWeaponName_Label]));
-		w79.Position = 0;
-		w79.Fill = false;
+		global::Gtk.Box.BoxChild w118 = ((global::Gtk.Box.BoxChild)(this.hbox9 [this.MeleeWeaponName_Label]));
+		w118.Position = 0;
+		w118.Fill = false;
 		// Container child hbox9.Gtk.Box+BoxChild
 		this.MeleeWeaponName_Textbox = new global::Gtk.Entry ();
 		this.MeleeWeaponName_Textbox.CanFocus = true;
@@ -876,14 +1300,14 @@ public partial class ShadowrunToolMainWindow
 		this.MeleeWeaponName_Textbox.IsEditable = true;
 		this.MeleeWeaponName_Textbox.InvisibleChar = '●';
 		this.hbox9.Add (this.MeleeWeaponName_Textbox);
-		global::Gtk.Box.BoxChild w80 = ((global::Gtk.Box.BoxChild)(this.hbox9 [this.MeleeWeaponName_Textbox]));
-		w80.Position = 1;
-		w80.Expand = false;
+		global::Gtk.Box.BoxChild w119 = ((global::Gtk.Box.BoxChild)(this.hbox9 [this.MeleeWeaponName_Textbox]));
+		w119.Position = 1;
+		w119.Expand = false;
 		this.Weapons_Vbox.Add (this.hbox9);
-		global::Gtk.Box.BoxChild w81 = ((global::Gtk.Box.BoxChild)(this.Weapons_Vbox [this.hbox9]));
-		w81.Position = 15;
-		w81.Expand = false;
-		w81.Fill = false;
+		global::Gtk.Box.BoxChild w120 = ((global::Gtk.Box.BoxChild)(this.Weapons_Vbox [this.hbox9]));
+		w120.Position = 12;
+		w120.Expand = false;
+		w120.Fill = false;
 		// Container child Weapons_Vbox.Gtk.Box+BoxChild
 		this.hbox63 = new global::Gtk.HBox ();
 		this.hbox63.Name = "hbox63";
@@ -893,9 +1317,9 @@ public partial class ShadowrunToolMainWindow
 		this.MeleeDamage_Label.Name = "MeleeDamage_Label";
 		this.MeleeDamage_Label.LabelProp = global::Mono.Unix.Catalog.GetString ("Damage");
 		this.hbox63.Add (this.MeleeDamage_Label);
-		global::Gtk.Box.BoxChild w82 = ((global::Gtk.Box.BoxChild)(this.hbox63 [this.MeleeDamage_Label]));
-		w82.Position = 0;
-		w82.Fill = false;
+		global::Gtk.Box.BoxChild w121 = ((global::Gtk.Box.BoxChild)(this.hbox63 [this.MeleeDamage_Label]));
+		w121.Position = 0;
+		w121.Fill = false;
 		// Container child hbox63.Gtk.Box+BoxChild
 		this.MeleeDamage_Textbox = new global::Gtk.Entry ();
 		this.MeleeDamage_Textbox.CanFocus = true;
@@ -903,14 +1327,14 @@ public partial class ShadowrunToolMainWindow
 		this.MeleeDamage_Textbox.IsEditable = true;
 		this.MeleeDamage_Textbox.InvisibleChar = '●';
 		this.hbox63.Add (this.MeleeDamage_Textbox);
-		global::Gtk.Box.BoxChild w83 = ((global::Gtk.Box.BoxChild)(this.hbox63 [this.MeleeDamage_Textbox]));
-		w83.Position = 1;
-		w83.Expand = false;
+		global::Gtk.Box.BoxChild w122 = ((global::Gtk.Box.BoxChild)(this.hbox63 [this.MeleeDamage_Textbox]));
+		w122.Position = 1;
+		w122.Expand = false;
 		this.Weapons_Vbox.Add (this.hbox63);
-		global::Gtk.Box.BoxChild w84 = ((global::Gtk.Box.BoxChild)(this.Weapons_Vbox [this.hbox63]));
-		w84.Position = 16;
-		w84.Expand = false;
-		w84.Fill = false;
+		global::Gtk.Box.BoxChild w123 = ((global::Gtk.Box.BoxChild)(this.Weapons_Vbox [this.hbox63]));
+		w123.Position = 13;
+		w123.Expand = false;
+		w123.Fill = false;
 		// Container child Weapons_Vbox.Gtk.Box+BoxChild
 		this.hbox64 = new global::Gtk.HBox ();
 		this.hbox64.Name = "hbox64";
@@ -920,21 +1344,20 @@ public partial class ShadowrunToolMainWindow
 		this.MeleeDamageType_Label.Name = "MeleeDamageType_Label";
 		this.MeleeDamageType_Label.LabelProp = global::Mono.Unix.Catalog.GetString ("Type");
 		this.hbox64.Add (this.MeleeDamageType_Label);
-		global::Gtk.Box.BoxChild w85 = ((global::Gtk.Box.BoxChild)(this.hbox64 [this.MeleeDamageType_Label]));
-		w85.Position = 0;
-		w85.Fill = false;
+		global::Gtk.Box.BoxChild w124 = ((global::Gtk.Box.BoxChild)(this.hbox64 [this.MeleeDamageType_Label]));
+		w124.Position = 0;
+		w124.Fill = false;
 		// Container child hbox64.Gtk.Box+BoxChild
 		this.MeleePhysicalDamage_Radio = new global::Gtk.RadioButton (global::Mono.Unix.Catalog.GetString ("Physical"));
 		this.MeleePhysicalDamage_Radio.CanFocus = true;
 		this.MeleePhysicalDamage_Radio.Name = "MeleePhysicalDamage_Radio";
-		this.MeleePhysicalDamage_Radio.Active = true;
 		this.MeleePhysicalDamage_Radio.DrawIndicator = true;
 		this.MeleePhysicalDamage_Radio.UseUnderline = true;
 		this.MeleePhysicalDamage_Radio.Group = new global::GLib.SList (global::System.IntPtr.Zero);
 		this.hbox64.Add (this.MeleePhysicalDamage_Radio);
-		global::Gtk.Box.BoxChild w86 = ((global::Gtk.Box.BoxChild)(this.hbox64 [this.MeleePhysicalDamage_Radio]));
-		w86.Position = 1;
-		w86.Expand = false;
+		global::Gtk.Box.BoxChild w125 = ((global::Gtk.Box.BoxChild)(this.hbox64 [this.MeleePhysicalDamage_Radio]));
+		w125.Position = 1;
+		w125.Expand = false;
 		// Container child hbox64.Gtk.Box+BoxChild
 		this.MeleeStunDamage_Radio = new global::Gtk.RadioButton (global::Mono.Unix.Catalog.GetString ("Stun"));
 		this.MeleeStunDamage_Radio.CanFocus = true;
@@ -943,14 +1366,14 @@ public partial class ShadowrunToolMainWindow
 		this.MeleeStunDamage_Radio.UseUnderline = true;
 		this.MeleeStunDamage_Radio.Group = this.MeleePhysicalDamage_Radio.Group;
 		this.hbox64.Add (this.MeleeStunDamage_Radio);
-		global::Gtk.Box.BoxChild w87 = ((global::Gtk.Box.BoxChild)(this.hbox64 [this.MeleeStunDamage_Radio]));
-		w87.Position = 2;
-		w87.Expand = false;
+		global::Gtk.Box.BoxChild w126 = ((global::Gtk.Box.BoxChild)(this.hbox64 [this.MeleeStunDamage_Radio]));
+		w126.Position = 2;
+		w126.Expand = false;
 		this.Weapons_Vbox.Add (this.hbox64);
-		global::Gtk.Box.BoxChild w88 = ((global::Gtk.Box.BoxChild)(this.Weapons_Vbox [this.hbox64]));
-		w88.Position = 17;
-		w88.Expand = false;
-		w88.Fill = false;
+		global::Gtk.Box.BoxChild w127 = ((global::Gtk.Box.BoxChild)(this.Weapons_Vbox [this.hbox64]));
+		w127.Position = 14;
+		w127.Expand = false;
+		w127.Fill = false;
 		// Container child Weapons_Vbox.Gtk.Box+BoxChild
 		this.hbox65 = new global::Gtk.HBox ();
 		this.hbox65.Name = "hbox65";
@@ -960,9 +1383,9 @@ public partial class ShadowrunToolMainWindow
 		this.MeleeAP_Label.Name = "MeleeAP_Label";
 		this.MeleeAP_Label.LabelProp = global::Mono.Unix.Catalog.GetString ("AP");
 		this.hbox65.Add (this.MeleeAP_Label);
-		global::Gtk.Box.BoxChild w89 = ((global::Gtk.Box.BoxChild)(this.hbox65 [this.MeleeAP_Label]));
-		w89.Position = 0;
-		w89.Fill = false;
+		global::Gtk.Box.BoxChild w128 = ((global::Gtk.Box.BoxChild)(this.hbox65 [this.MeleeAP_Label]));
+		w128.Position = 0;
+		w128.Fill = false;
 		// Container child hbox65.Gtk.Box+BoxChild
 		this.MeleeAP_Textbox = new global::Gtk.Entry ();
 		this.MeleeAP_Textbox.CanFocus = true;
@@ -970,14 +1393,83 @@ public partial class ShadowrunToolMainWindow
 		this.MeleeAP_Textbox.IsEditable = true;
 		this.MeleeAP_Textbox.InvisibleChar = '●';
 		this.hbox65.Add (this.MeleeAP_Textbox);
-		global::Gtk.Box.BoxChild w90 = ((global::Gtk.Box.BoxChild)(this.hbox65 [this.MeleeAP_Textbox]));
-		w90.Position = 1;
-		w90.Expand = false;
+		global::Gtk.Box.BoxChild w129 = ((global::Gtk.Box.BoxChild)(this.hbox65 [this.MeleeAP_Textbox]));
+		w129.Position = 1;
+		w129.Expand = false;
 		this.Weapons_Vbox.Add (this.hbox65);
-		global::Gtk.Box.BoxChild w91 = ((global::Gtk.Box.BoxChild)(this.Weapons_Vbox [this.hbox65]));
-		w91.Position = 18;
-		w91.Expand = false;
-		w91.Fill = false;
+		global::Gtk.Box.BoxChild w130 = ((global::Gtk.Box.BoxChild)(this.Weapons_Vbox [this.hbox65]));
+		w130.Position = 15;
+		w130.Expand = false;
+		w130.Fill = false;
+		// Container child Weapons_Vbox.Gtk.Box+BoxChild
+		this.MeleeSkill_Expander = new global::Gtk.Expander (null);
+		this.MeleeSkill_Expander.CanFocus = true;
+		this.MeleeSkill_Expander.Name = "MeleeSkill_Expander";
+		this.MeleeSkill_Expander.Expanded = true;
+		// Container child MeleeSkill_Expander.Gtk.Container+ContainerChild
+		this.vbox6 = new global::Gtk.VBox ();
+		this.vbox6.Name = "vbox6";
+		this.vbox6.Spacing = 6;
+		// Container child vbox6.Gtk.Box+BoxChild
+		this.hbox25 = new global::Gtk.HBox ();
+		this.hbox25.Name = "hbox25";
+		this.hbox25.Spacing = 6;
+		// Container child hbox25.Gtk.Box+BoxChild
+		this.Blades_Radio = new global::Gtk.RadioButton (global::Mono.Unix.Catalog.GetString ("Blades"));
+		this.Blades_Radio.CanFocus = true;
+		this.Blades_Radio.Name = "Blades_Radio";
+		this.Blades_Radio.DrawIndicator = true;
+		this.Blades_Radio.UseUnderline = true;
+		this.Blades_Radio.Group = new global::GLib.SList (global::System.IntPtr.Zero);
+		this.hbox25.Add (this.Blades_Radio);
+		global::Gtk.Box.BoxChild w131 = ((global::Gtk.Box.BoxChild)(this.hbox25 [this.Blades_Radio]));
+		w131.Position = 0;
+		// Container child hbox25.Gtk.Box+BoxChild
+		this.Clubs_Radio = new global::Gtk.RadioButton (global::Mono.Unix.Catalog.GetString ("Clubs"));
+		this.Clubs_Radio.CanFocus = true;
+		this.Clubs_Radio.Name = "Clubs_Radio";
+		this.Clubs_Radio.DrawIndicator = true;
+		this.Clubs_Radio.UseUnderline = true;
+		this.Clubs_Radio.Group = this.Blades_Radio.Group;
+		this.hbox25.Add (this.Clubs_Radio);
+		global::Gtk.Box.BoxChild w132 = ((global::Gtk.Box.BoxChild)(this.hbox25 [this.Clubs_Radio]));
+		w132.Position = 1;
+		this.vbox6.Add (this.hbox25);
+		global::Gtk.Box.BoxChild w133 = ((global::Gtk.Box.BoxChild)(this.vbox6 [this.hbox25]));
+		w133.Position = 0;
+		w133.Expand = false;
+		w133.Fill = false;
+		// Container child vbox6.Gtk.Box+BoxChild
+		this.hbox24 = new global::Gtk.HBox ();
+		this.hbox24.Name = "hbox24";
+		this.hbox24.Spacing = 6;
+		// Container child hbox24.Gtk.Box+BoxChild
+		this.Unarmed_Radio = new global::Gtk.RadioButton (global::Mono.Unix.Catalog.GetString ("Unarmed"));
+		this.Unarmed_Radio.CanFocus = true;
+		this.Unarmed_Radio.Name = "Unarmed_Radio";
+		this.Unarmed_Radio.DrawIndicator = true;
+		this.Unarmed_Radio.UseUnderline = true;
+		this.Unarmed_Radio.Group = this.Blades_Radio.Group;
+		this.hbox24.Add (this.Unarmed_Radio);
+		global::Gtk.Box.BoxChild w134 = ((global::Gtk.Box.BoxChild)(this.hbox24 [this.Unarmed_Radio]));
+		w134.Position = 0;
+		this.vbox6.Add (this.hbox24);
+		global::Gtk.Box.BoxChild w135 = ((global::Gtk.Box.BoxChild)(this.vbox6 [this.hbox24]));
+		w135.Position = 1;
+		w135.Expand = false;
+		w135.Fill = false;
+		this.MeleeSkill_Expander.Add (this.vbox6);
+		this.MeleeSkillExpander_Label = new global::Gtk.Label ();
+		this.MeleeSkillExpander_Label.Name = "MeleeSkillExpander_Label";
+		this.MeleeSkillExpander_Label.LabelProp = global::Mono.Unix.Catalog.GetString ("<b>Related Skill</b>");
+		this.MeleeSkillExpander_Label.UseMarkup = true;
+		this.MeleeSkillExpander_Label.UseUnderline = true;
+		this.MeleeSkill_Expander.LabelWidget = this.MeleeSkillExpander_Label;
+		this.Weapons_Vbox.Add (this.MeleeSkill_Expander);
+		global::Gtk.Box.BoxChild w137 = ((global::Gtk.Box.BoxChild)(this.Weapons_Vbox [this.MeleeSkill_Expander]));
+		w137.Position = 16;
+		w137.Expand = false;
+		w137.Fill = false;
 		// Container child Weapons_Vbox.Gtk.Box+BoxChild
 		this.ImportWeapons_Button = new global::Gtk.Button ();
 		this.ImportWeapons_Button.CanFocus = true;
@@ -985,18 +1477,18 @@ public partial class ShadowrunToolMainWindow
 		this.ImportWeapons_Button.UseUnderline = true;
 		this.ImportWeapons_Button.Label = global::Mono.Unix.Catalog.GetString ("Import Melee Weapons Stats");
 		this.Weapons_Vbox.Add (this.ImportWeapons_Button);
-		global::Gtk.Box.BoxChild w92 = ((global::Gtk.Box.BoxChild)(this.Weapons_Vbox [this.ImportWeapons_Button]));
-		w92.Position = 19;
-		w92.Expand = false;
-		w92.Fill = false;
+		global::Gtk.Box.BoxChild w138 = ((global::Gtk.Box.BoxChild)(this.Weapons_Vbox [this.ImportWeapons_Button]));
+		w138.Position = 17;
+		w138.Expand = false;
+		w138.Fill = false;
 		// Container child Weapons_Vbox.Gtk.Box+BoxChild
 		this.hseparator6 = new global::Gtk.HSeparator ();
 		this.hseparator6.Name = "hseparator6";
 		this.Weapons_Vbox.Add (this.hseparator6);
-		global::Gtk.Box.BoxChild w93 = ((global::Gtk.Box.BoxChild)(this.Weapons_Vbox [this.hseparator6]));
-		w93.Position = 21;
-		w93.Expand = false;
-		w93.Fill = false;
+		global::Gtk.Box.BoxChild w139 = ((global::Gtk.Box.BoxChild)(this.Weapons_Vbox [this.hseparator6]));
+		w139.Position = 18;
+		w139.Expand = false;
+		w139.Fill = false;
 		// Container child Weapons_Vbox.Gtk.Box+BoxChild
 		this.Save_Button = new global::Gtk.Button ();
 		this.Save_Button.CanFocus = true;
@@ -1004,10 +1496,10 @@ public partial class ShadowrunToolMainWindow
 		this.Save_Button.UseUnderline = true;
 		this.Save_Button.Label = global::Mono.Unix.Catalog.GetString ("Save Character");
 		this.Weapons_Vbox.Add (this.Save_Button);
-		global::Gtk.Box.BoxChild w94 = ((global::Gtk.Box.BoxChild)(this.Weapons_Vbox [this.Save_Button]));
-		w94.Position = 22;
-		w94.Expand = false;
-		w94.Fill = false;
+		global::Gtk.Box.BoxChild w140 = ((global::Gtk.Box.BoxChild)(this.Weapons_Vbox [this.Save_Button]));
+		w140.Position = 19;
+		w140.Expand = false;
+		w140.Fill = false;
 		this.GtkAlignment.Add (this.Weapons_Vbox);
 		this.Weapons_Frame.Add (this.GtkAlignment);
 		this.WeaponsPane_Label = new global::Gtk.Label ();
@@ -1016,10 +1508,10 @@ public partial class ShadowrunToolMainWindow
 		this.WeaponsPane_Label.UseMarkup = true;
 		this.Weapons_Frame.LabelWidget = this.WeaponsPane_Label;
 		this.Character_Pane.Add (this.Weapons_Frame);
-		global::Gtk.Box.BoxChild w97 = ((global::Gtk.Box.BoxChild)(this.Character_Pane [this.Weapons_Frame]));
-		w97.Position = 1;
-		w97.Expand = false;
-		w97.Fill = false;
+		global::Gtk.Box.BoxChild w143 = ((global::Gtk.Box.BoxChild)(this.Character_Pane [this.Weapons_Frame]));
+		w143.Position = 2;
+		w143.Expand = false;
+		w143.Fill = false;
 		// Container child Character_Pane.Gtk.Box+BoxChild
 		this.CharacterStateManager_Frame = new global::Gtk.Frame ();
 		this.CharacterStateManager_Frame.Name = "CharacterStateManager_Frame";
@@ -1036,10 +1528,10 @@ public partial class ShadowrunToolMainWindow
 		this.Characters_Combobox = global::Gtk.ComboBoxEntry.NewText ();
 		this.Characters_Combobox.Name = "Characters_Combobox";
 		this.vbox4.Add (this.Characters_Combobox);
-		global::Gtk.Box.BoxChild w98 = ((global::Gtk.Box.BoxChild)(this.vbox4 [this.Characters_Combobox]));
-		w98.Position = 0;
-		w98.Expand = false;
-		w98.Fill = false;
+		global::Gtk.Box.BoxChild w144 = ((global::Gtk.Box.BoxChild)(this.vbox4 [this.Characters_Combobox]));
+		w144.Position = 0;
+		w144.Expand = false;
+		w144.Fill = false;
 		// Container child vbox4.Gtk.Box+BoxChild
 		this.NewCharacter_Button = new global::Gtk.Button ();
 		this.NewCharacter_Button.CanFocus = true;
@@ -1047,10 +1539,10 @@ public partial class ShadowrunToolMainWindow
 		this.NewCharacter_Button.UseUnderline = true;
 		this.NewCharacter_Button.Label = global::Mono.Unix.Catalog.GetString ("New Character");
 		this.vbox4.Add (this.NewCharacter_Button);
-		global::Gtk.Box.BoxChild w99 = ((global::Gtk.Box.BoxChild)(this.vbox4 [this.NewCharacter_Button]));
-		w99.Position = 1;
-		w99.Expand = false;
-		w99.Fill = false;
+		global::Gtk.Box.BoxChild w145 = ((global::Gtk.Box.BoxChild)(this.vbox4 [this.NewCharacter_Button]));
+		w145.Position = 1;
+		w145.Expand = false;
+		w145.Fill = false;
 		// Container child vbox4.Gtk.Box+BoxChild
 		this.DeleteCharacter_Button = new global::Gtk.Button ();
 		this.DeleteCharacter_Button.CanFocus = true;
@@ -1058,10 +1550,10 @@ public partial class ShadowrunToolMainWindow
 		this.DeleteCharacter_Button.UseUnderline = true;
 		this.DeleteCharacter_Button.Label = global::Mono.Unix.Catalog.GetString ("Delete Character");
 		this.vbox4.Add (this.DeleteCharacter_Button);
-		global::Gtk.Box.BoxChild w100 = ((global::Gtk.Box.BoxChild)(this.vbox4 [this.DeleteCharacter_Button]));
-		w100.Position = 2;
-		w100.Expand = false;
-		w100.Fill = false;
+		global::Gtk.Box.BoxChild w146 = ((global::Gtk.Box.BoxChild)(this.vbox4 [this.DeleteCharacter_Button]));
+		w146.Position = 2;
+		w146.Expand = false;
+		w146.Fill = false;
 		// Container child vbox4.Gtk.Box+BoxChild
 		this.EditCharacter_Button = new global::Gtk.Button ();
 		this.EditCharacter_Button.CanFocus = true;
@@ -1069,10 +1561,10 @@ public partial class ShadowrunToolMainWindow
 		this.EditCharacter_Button.UseUnderline = true;
 		this.EditCharacter_Button.Label = global::Mono.Unix.Catalog.GetString ("Edit Character");
 		this.vbox4.Add (this.EditCharacter_Button);
-		global::Gtk.Box.BoxChild w101 = ((global::Gtk.Box.BoxChild)(this.vbox4 [this.EditCharacter_Button]));
-		w101.Position = 3;
-		w101.Expand = false;
-		w101.Fill = false;
+		global::Gtk.Box.BoxChild w147 = ((global::Gtk.Box.BoxChild)(this.vbox4 [this.EditCharacter_Button]));
+		w147.Position = 3;
+		w147.Expand = false;
+		w147.Fill = false;
 		this.GtkAlignment1.Add (this.vbox4);
 		this.CharacterStateManager_Frame.Add (this.GtkAlignment1);
 		this.CharactersList_Label = new global::Gtk.Label ();
@@ -1081,10 +1573,10 @@ public partial class ShadowrunToolMainWindow
 		this.CharactersList_Label.UseMarkup = true;
 		this.CharacterStateManager_Frame.LabelWidget = this.CharactersList_Label;
 		this.Character_Pane.Add (this.CharacterStateManager_Frame);
-		global::Gtk.Box.BoxChild w104 = ((global::Gtk.Box.BoxChild)(this.Character_Pane [this.CharacterStateManager_Frame]));
-		w104.Position = 2;
-		w104.Expand = false;
-		w104.Fill = false;
+		global::Gtk.Box.BoxChild w150 = ((global::Gtk.Box.BoxChild)(this.Character_Pane [this.CharacterStateManager_Frame]));
+		w150.Position = 3;
+		w150.Expand = false;
+		w150.Fill = false;
 		this.notebook1.Add (this.Character_Pane);
 		// Notebook tab
 		this.Character_NotePage = new global::Gtk.Label ();
@@ -1096,8 +1588,8 @@ public partial class ShadowrunToolMainWindow
 		if ((this.Child != null)) {
 			this.Child.ShowAll ();
 		}
-		this.DefaultWidth = 890;
-		this.DefaultHeight = 671;
+		this.DefaultWidth = 1122;
+		this.DefaultHeight = 765;
 		this.Show ();
 		this.DeleteEvent += new global::Gtk.DeleteEventHandler (this.OnDeleteEvent);
 		this.ImportAttributeSection_Button.Clicked += new global::System.EventHandler (this.AttributeImport_Click);

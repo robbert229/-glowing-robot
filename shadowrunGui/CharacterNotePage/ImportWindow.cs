@@ -11,16 +11,17 @@ namespace ShadowrunGui
 		private List<IManifest<IManifestItem>> items;
 		public IManifestItem selectedItem;
 
-		public ImportWindow (List<IManifest<IManifestItem>> items) : 
+		public ImportWindow (List<IManifest<IManifestItem>> items,string title) : 
 				base(Gtk.WindowType.Toplevel)
 		{
 			this.Build ();
 			this.items = items;
+			this.Title = title;
 
 			Modal = true;
-			Show();
-
 			BuildTree();
+
+			Show();
 		}
 
 		private void BuildTree(){

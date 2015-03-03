@@ -2,7 +2,7 @@ using System;
 
 namespace ShadowrunLogic
 {
-	public abstract class AbstractMeleeWeapon : IMeleeWeapon
+	public abstract class AbstractMeleeWeapon : IManifestItem
 	{
 		public string TypeString(){
 			return WeaponType().ToString();
@@ -14,6 +14,7 @@ namespace ShadowrunLogic
 		public abstract MeleeWeaponType WeaponType();
 		public abstract string Name();
 		public abstract int Accuracy();
+		public abstract MeleeWeaponSkills Skill();
 	}
 }
 

@@ -2,49 +2,50 @@ using System;
 using ShadowrunLogic;
 namespace ShadowrunCoreContent
 {
-	public class DefianceEXShocker : IRangedWeapon
+	public class DefianceEXShocker : AbstractRangedWeapon
 	{
-		public int Damage() {
+		public override int Damage() {
 			return 9;
 		}
 
-		public DamageType DamageType(){
+		public override DamageType DamageType(){
 			return ShadowrunLogic.DamageType.Stun;
 		}
 
-		public int Accuracy() {
+		public override int Accuracy() {
 			return 4;
 		}
 
-		public int AP ()
+		public override int AP ()
 		{
 			return -5;
 		} 
 
-		public RangedWeaponType WeaponType() {
+		public override RangedWeaponType WeaponType() {
 			return RangedWeaponType.Tazer;
 		}
 
-		public RangedFiringModes FiringModes() {
+		public override RangedFiringModes FiringModes() {
 			RangedFiringModes rfm = new RangedFiringModes();
 			rfm.SingleShot = true;
 			return rfm;
 		}
 
-		public int MagSize(){
+		public override int MagSize(){
 			return 4;
 		}
 
-		public string Name(){
+		public override string Name(){
 			return "Defiance EX Shocker";
 		}
 
-		public int Recoil(){
+		public override int Recoil(){
 			return 0;
 		}
 
-		public string TypeString(){
-			return DamageType().ToString();
+		public override RangedWeaponSkills Skill ()
+		{
+			return RangedWeaponSkills.Pistols;
 		}
 	}
 }

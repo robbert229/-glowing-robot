@@ -44,18 +44,20 @@
     <Compile Include="Pool.cs" />
     <Compile Include="Combat.cs" />
     <Compile Include="DamageType.cs" />
-    <Compile Include="Weapons\Ranged\IRangedWeapon.cs" />
     <Compile Include="Weapons\Ranged\RangedWeaponType.cs" />
     <Compile Include="Weapons\Ranged\RangedFiringModes.cs" />
-    <Compile Include="Weapons\Ranged\RangedWeaponsCatalog.cs" />
     <Compile Include="Character\AbstractAttributes.cs" />
     <Compile Include="gtk-gui\generated.cs" />
     <Compile Include="Manifest\IManifest.cs" />
-    <Compile Include="Weapons\Melee\IMeleeWeapon.cs" />
     <Compile Include="Weapons\Melee\MeleeWeaponType.cs" />
     <Compile Include="Manifest\IManifestItem.cs" />
     <Compile Include="Weapons\Ranged\AbstractRangedWeapon.cs" />
     <Compile Include="Weapons\Melee\AbstractMeleeWeapon.cs" />
+    <Compile Include="Character\AttributeType.cs" />
+    <Compile Include="Character\Character.cs" />
+    <Compile Include="Weapons\Ranged\RangedWeaponSkills.cs" />
+    <Compile Include="Weapons\Ranged\CustomRangedWeapon.cs" />
+    <Compile Include="Weapons\Melee\MeleeWeaponSkills.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>

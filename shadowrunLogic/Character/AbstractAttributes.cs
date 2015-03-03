@@ -2,33 +2,31 @@ using System;
 
 namespace ShadowrunLogic
 {
-	public abstract class AbstractAttributes
+	public abstract class AbstractAttributes : IManifestItem
 	{
-		public int Body { get; protected set; }
-		public int Agility {get; protected set; }
-		public int Reaction { get; protected set; }
-		public int Willpower { get; protected set; }
-		public int Logic {get; protected set; }
-		public int Intuition { get; protected set; }
-		public int Charisma { get; protected set; }
+		#region attributes
+		public abstract int Body();
+		public abstract int Agility();
+		public abstract int Reaction();
+		public abstract int Strength();
+		public abstract int Willpower();
+		public abstract int Logic();
+		public abstract int Intuition();
+		public abstract int Charisma();
+		public abstract int InitiativeDice();
+		public abstract int InitiativeModifier();
+		#endregion
 
-		public int InitiativeDice { get; protected set; }
-		public int InitiativeModifier {get; protected set; }
-
-		public int Armor { get; protected set; }
-
-		public int MeleeSkill { get; protected set; }
-		public int RangedSkill { get; protected set; }
+		public abstract int Armor();
 
 		public int StunDamageTaken { get; set; }
 		public int PhysicalDamageTaken { get; set; }
 
 		public int MaxStunDamage(){
-			return 8 + (Willpower / 2);
+			return 8 + (Willpower() / 2);
 		}
-
 		public int MaxPhysixalDamage() {
-			return 8 + (Body / 2);
+			return 8 + (Body() / 2);
 		}
 
 		public int GetDamageModifier(){
@@ -39,6 +37,26 @@ namespace ShadowrunLogic
 				return sMod;
 			return pMod;
 		}
+
+		public abstract string Name ();
+
+		public abstract AttributeType AttributeType();
+		public string TypeString ()
+		{
+			return AttributeType().ToString();
+		}
+
+		#region combat-skills
+		public abstract int Archery();
+		public abstract int Automatics();
+		public abstract int Blades();
+		public abstract int Clubs();
+		public abstract int HeavyWeapons();
+		public abstract int Longarms();
+		public abstract int Pistols();
+		public abstract int ThrowingWeapons();
+		public abstract int UnarmedCombat();
+		#endregion
 	}
 }
 

@@ -54,6 +54,8 @@
     <Compile Include="Weapons\Melee\Blades\SurvivalKnife.cs" />
     <Compile Include="Weapons\Melee\Blades\Sword.cs" />
     <Compile Include="Weapons\Melee\Blades\MeleeWeaponsManifest.cs" />
+    <Compile Include="Attributes\AttributesManifest.cs" />
+    <Compile Include="Attributes\Gangers\AverageGangerAttributes.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
@@ -64,6 +66,8 @@
     <Folder Include="Weapons\Ranged\LightPistols\" />
     <Folder Include="Weapons\Melee\" />
     <Folder Include="Weapons\Melee\Blades\" />
+    <Folder Include="Attributes\" />
+    <Folder Include="Attributes\Gangers\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\shadowrunLogic\ShadowrunLogic.csproj">

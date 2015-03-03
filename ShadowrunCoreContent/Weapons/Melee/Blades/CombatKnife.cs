@@ -28,6 +28,11 @@ namespace ShadowrunCoreContent
 		public override int Accuracy(){
 			return 6;
 		}
+
+		public override MeleeWeaponSkills Skill ()
+		{
+			return MeleeWeaponSkills.Blades;
+		}
 	}
 }
 
