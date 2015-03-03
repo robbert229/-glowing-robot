@@ -69,8 +69,10 @@
     <Compile Include="AssemblyInfo.cs" />
     <Compile Include="ShadowrunToolMainWindow.cs" />
     <Compile Include="gtk-gui\ShadowrunToolMainWindow.cs" />
-    <Compile Include="gtk-gui\ShadowrunGui.RangedWeaponImportWindow.cs" />
     <Compile Include="CharacterNotePage\RangedWeaponImportWindow.cs" />
+    <Compile Include="gtk-gui\ShadowrunGui.RangedWeaponImportWindow.cs" />
+    <Compile Include="CharacterNotePage\ImportWindow.cs" />
+    <Compile Include="gtk-gui\ShadowrunGui.ImportWindow.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>

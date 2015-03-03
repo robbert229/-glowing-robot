@@ -8,7 +8,6 @@
     <widget-library name="glade-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
     <widget-library name="../../ShadowrunCoreContent/bin/Debug/ShadowrunCoreContent.dll" />
     <widget-library name="../../shadowrunLogic/bin/Debug/ShadowrunLogic.dll" />
-    <widget-library name="MonoDevelop.Ide, Version=2.6.0.0, Culture=neutral" />
     <widget-library name="../bin/Debug/ShadowrunGui.exe" internal="true" />
   </import>
   <widget class="Gtk.Window" id="ShadowrunToolMainWindow" design-size="890 671">
@@ -691,6 +690,7 @@
                                 <property name="MemberName" />
                                 <property name="CanFocus">True</property>
                                 <property name="Label" translatable="yes">Physical</property>
+                                <property name="Active">True</property>
                                 <property name="DrawIndicator">True</property>
                                 <property name="HasLabel">True</property>
                                 <property name="UseUnderline">True</property>
@@ -799,13 +799,49 @@
                           </packing>
                         </child>
                         <child>
+                          <widget class="Gtk.HBox" id="hbox11">
+                            <property name="MemberName" />
+                            <property name="Spacing">6</property>
+                            <child>
+                              <widget class="Gtk.Label" id="RangedRecoil_Label">
+                                <property name="MemberName" />
+                                <property name="LabelProp" translatable="yes">Recoil</property>
+                              </widget>
+                              <packing>
+                                <property name="Position">0</property>
+                                <property name="AutoSize">False</property>
+                                <property name="Fill">False</property>
+                              </packing>
+                            </child>
+                            <child>
+                              <widget class="Gtk.Entry" id="RangedRecoil_Textbox">
+                                <property name="MemberName" />
+                                <property name="CanFocus">True</property>
+                                <property name="IsEditable">True</property>
+                                <property name="InvisibleChar">●</property>
+                              </widget>
+                              <packing>
+                                <property name="Position">1</property>
+                                <property name="AutoSize">False</property>
+                                <property name="Expand">False</property>
+                              </packing>
+                            </child>
+                          </widget>
+                          <packing>
+                            <property name="Position">6</property>
+                            <property name="AutoSize">True</property>
+                            <property name="Expand">False</property>
+                            <property name="Fill">False</property>
+                          </packing>
+                        </child>
+                        <child>
                           <widget class="Gtk.Label" id="FiringModesSupported_Label">
                             <property name="MemberName" />
                             <property name="LabelProp" translatable="yes">Firing Modes</property>
                             <property name="Justify">Center</property>
                           </widget>
                           <packing>
-                            <property name="Position">6</property>
+                            <property name="Position">7</property>
                             <property name="AutoSize">True</property>
                             <property name="Expand">False</property>
                             <property name="Fill">False</property>
@@ -845,7 +881,7 @@
                             </child>
                           </widget>
                           <packing>
-                            <property name="Position">7</property>
+                            <property name="Position">8</property>
                             <property name="AutoSize">True</property>
                             <property name="Expand">False</property>
                             <property name="Fill">False</property>
@@ -885,7 +921,7 @@
                             </child>
                           </widget>
                           <packing>
-                            <property name="Position">8</property>
+                            <property name="Position">9</property>
                             <property name="AutoSize">True</property>
                             <property name="Expand">False</property>
                             <property name="Fill">False</property>
@@ -925,7 +961,7 @@
                             </child>
                           </widget>
                           <packing>
-                            <property name="Position">9</property>
+                            <property name="Position">10</property>
                             <property name="AutoSize">True</property>
                             <property name="Expand">False</property>
                             <property name="Fill">False</property>
@@ -941,7 +977,7 @@
                             <signal name="Clicked" handler="RangedWeaponImport_Click" />
                           </widget>
                           <packing>
-                            <property name="Position">10</property>
+                            <property name="Position">11</property>
                             <property name="AutoSize">True</property>
                             <property name="Expand">False</property>
                             <property name="Fill">False</property>
@@ -955,7 +991,7 @@
                             <property name="MemberName" />
                           </widget>
                           <packing>
-                            <property name="Position">12</property>
+                            <property name="Position">13</property>
                             <property name="AutoSize">True</property>
                             <property name="Expand">False</property>
                             <property name="Fill">False</property>
@@ -968,7 +1004,7 @@
                             <property name="UseMarkup">True</property>
                           </widget>
                           <packing>
-                            <property name="Position">13</property>
+                            <property name="Position">14</property>
                             <property name="AutoSize">True</property>
                             <property name="Expand">False</property>
                             <property name="Fill">False</property>
@@ -1004,7 +1040,7 @@
                             </child>
                           </widget>
                           <packing>
-                            <property name="Position">14</property>
+                            <property name="Position">15</property>
                             <property name="AutoSize">True</property>
                             <property name="Expand">False</property>
                             <property name="Fill">False</property>
@@ -1026,7 +1062,7 @@
                               </packing>
                             </child>
                             <child>
-                              <widget class="Gtk.Entry" id="entry1">
+                              <widget class="Gtk.Entry" id="MeleeDamage_Textbox">
                                 <property name="MemberName" />
                                 <property name="CanFocus">True</property>
                                 <property name="IsEditable">True</property>
@@ -1040,7 +1076,7 @@
                             </child>
                           </widget>
                           <packing>
-                            <property name="Position">15</property>
+                            <property name="Position">16</property>
                             <property name="AutoSize">True</property>
                             <property name="Expand">False</property>
                             <property name="Fill">False</property>
@@ -1066,6 +1102,7 @@
                                 <property name="MemberName" />
                                 <property name="CanFocus">True</property>
                                 <property name="Label" translatable="yes">Physical</property>
+                                <property name="Active">True</property>
                                 <property name="DrawIndicator">True</property>
                                 <property name="HasLabel">True</property>
                                 <property name="UseUnderline">True</property>
@@ -1095,7 +1132,7 @@
                             </child>
                           </widget>
                           <packing>
-                            <property name="Position">16</property>
+                            <property name="Position">17</property>
                             <property name="AutoSize">True</property>
                             <property name="Expand">False</property>
                             <property name="Fill">False</property>
@@ -1117,7 +1154,7 @@
                               </packing>
                             </child>
                             <child>
-                              <widget class="Gtk.Entry" id="entry2">
+                              <widget class="Gtk.Entry" id="MeleeAP_Textbox">
                                 <property name="MemberName" />
                                 <property name="CanFocus">True</property>
                                 <property name="IsEditable">True</property>
@@ -1131,7 +1168,7 @@
                             </child>
                           </widget>
                           <packing>
-                            <property name="Position">17</property>
+                            <property name="Position">18</property>
                             <property name="AutoSize">True</property>
                             <property name="Expand">False</property>
                             <property name="Fill">False</property>
@@ -1144,9 +1181,10 @@
                             <property name="Type">TextOnly</property>
                             <property name="Label" translatable="yes">Import Melee Weapons Stats</property>
                             <property name="UseUnderline">True</property>
+                            <signal name="Clicked" handler="MeleeWeaponImport_Click" />
                           </widget>
                           <packing>
-                            <property name="Position">18</property>
+                            <property name="Position">19</property>
                             <property name="AutoSize">True</property>
                             <property name="Expand">False</property>
                             <property name="Fill">False</property>
@@ -1160,7 +1198,7 @@
                             <property name="MemberName" />
                           </widget>
                           <packing>
-                            <property name="Position">20</property>
+                            <property name="Position">21</property>
                             <property name="AutoSize">True</property>
                             <property name="Expand">False</property>
                             <property name="Fill">False</property>
@@ -1175,7 +1213,7 @@
                             <property name="UseUnderline">True</property>
                           </widget>
                           <packing>
-                            <property name="Position">21</property>
+                            <property name="Position">22</property>
                             <property name="AutoSize">True</property>
                             <property name="Expand">False</property>
                             <property name="Fill">False</property>
@@ -1326,6 +1364,50 @@
             <property name="ShadowType">In</property>
             <child>
               <widget class="Gtk.TreeView" id="WeaponList_TreeView">
+                <property name="MemberName" />
+                <property name="CanFocus">True</property>
+                <property name="ShowScrollbars">True</property>
+              </widget>
+            </child>
+          </widget>
+          <packing>
+            <property name="Position">0</property>
+            <property name="AutoSize">True</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Button" id="TreeViewSelect_Button">
+            <property name="MemberName" />
+            <property name="CanFocus">True</property>
+            <property name="Type">TextOnly</property>
+            <property name="Label" translatable="yes">Select</property>
+            <property name="UseUnderline">True</property>
+            <signal name="Clicked" handler="TreeViewSelect_Click" />
+          </widget>
+          <packing>
+            <property name="Position">1</property>
+            <property name="AutoSize">True</property>
+            <property name="Expand">False</property>
+            <property name="Fill">False</property>
+          </packing>
+        </child>
+      </widget>
+    </child>
+  </widget>
+  <widget class="Gtk.Window" id="ShadowrunGui.ImportWindow" design-size="400 300">
+    <property name="MemberName" />
+    <property name="Title" translatable="yes">AbstractImportWindow2</property>
+    <property name="WindowPosition">CenterOnParent</property>
+    <child>
+      <widget class="Gtk.VBox" id="vbox1">
+        <property name="MemberName" />
+        <property name="Spacing">6</property>
+        <child>
+          <widget class="Gtk.ScrolledWindow" id="GtkScrolledWindow">
+            <property name="MemberName" />
+            <property name="ShadowType">In</property>
+            <child>
+              <widget class="Gtk.TreeView" id="Item_TreeView">
                 <property name="MemberName" />
                 <property name="CanFocus">True</property>
                 <property name="ShowScrollbars">True</property>

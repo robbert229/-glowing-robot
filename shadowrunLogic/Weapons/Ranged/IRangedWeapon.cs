@@ -2,7 +2,7 @@ using System;
 
 namespace ShadowrunLogic
 {
-	public interface IRangedWeapon
+	public interface IRangedWeapon : IManifestItem
 	{
 		int Damage();
 		DamageType DamageType();

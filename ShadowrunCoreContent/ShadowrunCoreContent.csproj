@@ -33,26 +33,37 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AssemblyInfo.cs" />
-    <Compile Include="Weapons\Firearms\Tasers\DefianceEXShocker.cs" />
-    <Compile Include="Weapons\Firearms\Tasers\YamahaPulsar.cs" />
-    <Compile Include="Weapons\Firearms\RangedWeaponsManifest.cs" />
-    <Compile Include="Weapons\Firearms\Holdouts\FichettiTiffaniNeedler.cs" />
-    <Compile Include="Weapons\Firearms\Holdouts\StreetlineSpecial.cs" />
-    <Compile Include="Weapons\Firearms\Holdouts\WaltherPalmPistol.cs" />
-    <Compile Include="Weapons\Firearms\LightPistols\AresLightFire75.cs" />
-    <Compile Include="Weapons\Firearms\LightPistols\AresLightFire70.cs" />
-    <Compile Include="Weapons\Firearms\LightPistols\Beretta201T.cs" />
-    <Compile Include="Weapons\Firearms\LightPistols\ColtAmericaL36.cs" />
-    <Compile Include="Weapons\Firearms\LightPistols\FichettiSecurity600.cs" />
-    <Compile Include="Weapons\Firearms\LightPistols\TaurusOmni6.cs" />
+    <Compile Include="Weapons\Ranged\Tasers\DefianceEXShocker.cs" />
+    <Compile Include="Weapons\Ranged\Tasers\YamahaPulsar.cs" />
+    <Compile Include="Weapons\Ranged\RangedWeaponsManifest.cs" />
+    <Compile Include="Weapons\Ranged\Holdouts\FichettiTiffaniNeedler.cs" />
+    <Compile Include="Weapons\Ranged\Holdouts\StreetlineSpecial.cs" />
+    <Compile Include="Weapons\Ranged\Holdouts\WaltherPalmPistol.cs" />
+    <Compile Include="Weapons\Ranged\LightPistols\AresLightFire75.cs" />
+    <Compile Include="Weapons\Ranged\LightPistols\AresLightFire70.cs" />
+    <Compile Include="Weapons\Ranged\LightPistols\Beretta201T.cs" />
+    <Compile Include="Weapons\Ranged\LightPistols\ColtAmericaL36.cs" />
+    <Compile Include="Weapons\Ranged\LightPistols\FichettiSecurity600.cs" />
+    <Compile Include="Weapons\Ranged\LightPistols\TaurusOmni6.cs" />
+    <Compile Include="Weapons\Melee\Blades\CombatAxe.cs" />
+    <Compile Include="Weapons\Melee\Blades\CombatKnife.cs" />
+    <Compile Include="Weapons\Melee\Blades\ForearmSnapBlades.cs" />
+    <Compile Include="Weapons\Melee\Blades\Katana.cs" />
+    <Compile Include="Weapons\Melee\Blades\Knife.cs" />
+    <Compile Include="Weapons\Melee\Blades\Polearm.cs" />
+    <Compile Include="Weapons\Melee\Blades\SurvivalKnife.cs" />
+    <Compile Include="Weapons\Melee\Blades\Sword.cs" />
+    <Compile Include="Weapons\Melee\Blades\MeleeWeaponsManifest.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
     <Folder Include="Weapons\" />
-    <Folder Include="Weapons\Firearms\" />
-    <Folder Include="Weapons\Firearms\Tasers\" />
-    <Folder Include="Weapons\Firearms\Holdouts\" />
-    <Folder Include="Weapons\Firearms\LightPistols\" />
+    <Folder Include="Weapons\Ranged\" />
+    <Folder Include="Weapons\Ranged\Tasers\" />
+    <Folder Include="Weapons\Ranged\Holdouts\" />
+    <Folder Include="Weapons\Ranged\LightPistols\" />
+    <Folder Include="Weapons\Melee\" />
+    <Folder Include="Weapons\Melee\Blades\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\shadowrunLogic\ShadowrunLogic.csproj">
