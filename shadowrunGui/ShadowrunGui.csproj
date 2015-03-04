@@ -71,6 +71,9 @@
     <Compile Include="gtk-gui\ShadowrunToolMainWindow.cs" />
     <Compile Include="CharacterNotePage\ImportWindow.cs" />
     <Compile Include="gtk-gui\ShadowrunGui.ImportWindow.cs" />
+    <Compile Include="CustomRangedWeapon.cs" />
+    <Compile Include="CustomMeleeWeapon.cs" />
+    <Compile Include="CustomAttributes.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>

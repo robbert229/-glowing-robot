@@ -56,7 +56,6 @@
     <Compile Include="Character\AttributeType.cs" />
     <Compile Include="Character\Character.cs" />
     <Compile Include="Weapons\Ranged\RangedWeaponSkills.cs" />
-    <Compile Include="Weapons\Ranged\CustomRangedWeapon.cs" />
     <Compile Include="Weapons\Melee\MeleeWeaponSkills.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

@@ -30,6 +30,32 @@ public partial class ShadowrunToolMainWindow: Gtk.Window
 		attributeManifests.Add(new ShadowrunCoreContent.AttributesManifest());
 	}
 
+	private AbstractAttributes attributesFromFormInput(){
+		return new CustomAttributes(
+			Int32.Parse(Body_Textbox.Text),
+			Int32.Parse(Agility_Textbox.Text),
+			Int32.Parse(Reaction_Textbox.Text),
+			Int32.Parse(Strength_Textbox.Text),
+			Int32.Parse (Willpower_Textbox.Text),
+			Int32.Parse (Logic_Textbox.Text),
+			Int32.Parse (Intuition_Textbox.Text),
+			Int32.Parse (Charisma_Textbox.Text),
+			Int32.Parse (InitiativeDiceCount_Textbox.Text),
+			Int32.Parse (InitiativeModifier_Textbox.Text),
+			Int32.Parse (Armor_Textbox.Text),
+			Name_Textbox.Text,
+			AttributeType.Custom,
+			(int)Archery_Spinbox.Value,
+			(int)AutomaticsSpinbox.Value,
+			(int)Blades_Spinbox.Value,
+			(int)Clubs_Spinbox.Value,
+			(int)HeavyWeapons_Spinbox.Value,
+			(int)Longarms_Spinbox.Value,
+			(int)Pistols_Spinbox.Value,
+			(int)ThrowingWeapons_Spinbox.Value,
+			(int)UnarmedCombat_Spinbox.Value);
+	}
+
 	#region FormEvents
 	protected void OnDeleteEvent (object sender, DeleteEventArgs a)
 	{

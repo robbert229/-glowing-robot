@@ -152,7 +152,7 @@ public partial class ShadowrunToolMainWindow
 	private global::Gtk.Label MeleeSkillExpander_Label;
 	private global::Gtk.Button ImportWeapons_Button;
 	private global::Gtk.HSeparator hseparator6;
-	private global::Gtk.Button Save_Button;
+	private global::Gtk.Button SaveCharacter_Button;
 	private global::Gtk.Label WeaponsPane_Label;
 	private global::Gtk.Frame CharacterStateManager_Frame;
 	private global::Gtk.Alignment GtkAlignment1;
@@ -1490,13 +1490,13 @@ public partial class ShadowrunToolMainWindow
 		w139.Expand = false;
 		w139.Fill = false;
 		// Container child Weapons_Vbox.Gtk.Box+BoxChild
-		this.Save_Button = new global::Gtk.Button ();
-		this.Save_Button.CanFocus = true;
-		this.Save_Button.Name = "Save_Button";
-		this.Save_Button.UseUnderline = true;
-		this.Save_Button.Label = global::Mono.Unix.Catalog.GetString ("Save Character");
-		this.Weapons_Vbox.Add (this.Save_Button);
-		global::Gtk.Box.BoxChild w140 = ((global::Gtk.Box.BoxChild)(this.Weapons_Vbox [this.Save_Button]));
+		this.SaveCharacter_Button = new global::Gtk.Button ();
+		this.SaveCharacter_Button.CanFocus = true;
+		this.SaveCharacter_Button.Name = "Save_Button";
+		this.SaveCharacter_Button.UseUnderline = true;
+		this.SaveCharacter_Button.Label = global::Mono.Unix.Catalog.GetString ("Save Character");
+		this.Weapons_Vbox.Add (this.SaveCharacter_Button);
+		global::Gtk.Box.BoxChild w140 = ((global::Gtk.Box.BoxChild)(this.Weapons_Vbox [this.SaveCharacter_Button]));
 		w140.Position = 19;
 		w140.Expand = false;
 		w140.Fill = false;
