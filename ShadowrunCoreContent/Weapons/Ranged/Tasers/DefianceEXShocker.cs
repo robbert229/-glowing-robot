@@ -21,10 +21,6 @@ namespace ShadowrunCoreContent
 			return -5;
 		} 
 
-		public override RangedWeaponType WeaponType() {
-			return RangedWeaponType.Tazer;
-		}
-
 		public override RangedFiringModes FiringModes() {
 			RangedFiringModes rfm = new RangedFiringModes();
 			rfm.SingleShot = true;

@@ -2,7 +2,7 @@ using System;
 using ShadowrunLogic;
 namespace ShadowrunCoreContent
 {
-	public class WaltherPalmPistol : AbstractRangedWeapon
+	public class AresPredator : AbstractRangedWeapon
 	{
 		public override int Damage() {
 			return 7;
@@ -13,29 +13,29 @@ namespace ShadowrunCoreContent
 		}
 
 		public override int Accuracy() {
-			return 4;
+			return 6;
 		}
 
 		public override int AP ()
 		{
-			return 0;
+			return -1;
 		} 
 
 		public override RangedFiringModes FiringModes() {
 			RangedFiringModes rfm = new RangedFiringModes();
+			rfm.SemiAutomatic = true;
 			rfm.SingleShot = true;
-			rfm.SemiAutomaticBurst = true;
 			return rfm;
 		}
 
 		public override int MagSize(){
-			return 2;
+			return 6;
 		}
 
 		public override string Name(){
-			return "Walther Palm Pistol";
+			return "Ares Predator";
 		}
-
+				
 		public override int Recoil(){
 			return 0;
 		}

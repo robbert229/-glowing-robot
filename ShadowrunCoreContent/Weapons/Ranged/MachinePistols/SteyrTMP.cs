@@ -2,7 +2,7 @@ using System;
 using ShadowrunLogic;
 namespace ShadowrunCoreContent
 {
-	public class WaltherPalmPistol : AbstractRangedWeapon
+	public class SteyrTMP : AbstractRangedWeapon
 	{
 		public override int Damage() {
 			return 7;
@@ -21,28 +21,30 @@ namespace ShadowrunCoreContent
 			return 0;
 		} 
 
+
 		public override RangedFiringModes FiringModes() {
 			RangedFiringModes rfm = new RangedFiringModes();
-			rfm.SingleShot = true;
-			rfm.SemiAutomaticBurst = true;
+			rfm.SemiAutomatic = true;
+			rfm.BurstFire = true;
+			rfm.FullAuto = true;
 			return rfm;
 		}
 
 		public override int MagSize(){
-			return 2;
+			return 30;
 		}
 
 		public override string Name(){
-			return "Walther Palm Pistol";
+			return "Steyr TMP";
 		}
-
+				
 		public override int Recoil(){
 			return 0;
 		}
 
 		public override RangedWeaponSkills Skill ()
 		{
-			return RangedWeaponSkills.Pistols;
+			return RangedWeaponSkills.Automatics;
 		}
 	}
 }

@@ -57,6 +57,33 @@ namespace ShadowrunLogic
 		public abstract int ThrowingWeapons();
 		public abstract int UnarmedCombat();
 		#endregion
+
+		public AbstractAttributes Clone ()
+		{
+			return new CustomAttributes(
+				Body(),
+				Agility(),
+				Reaction(),
+				Strength(),
+				Willpower(),
+				Logic(),
+				Intuition(),
+				Charisma(),
+				InitiativeDice(),
+				InitiativeModifier(),
+				Armor(),
+				Name(),
+				AttributeType(),
+				Archery(),
+				Automatics(),
+				Blades(),
+				Clubs(),
+				HeavyWeapons(),
+				Longarms(),
+				Pistols(),
+				ThrowingWeapons(),
+				UnarmedCombat());
+		}
 	}
 }
 

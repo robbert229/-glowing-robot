@@ -67,13 +67,14 @@
     <Compile Include="gtk-gui\generated.cs" />
     <Compile Include="Main.cs" />
     <Compile Include="AssemblyInfo.cs" />
-    <Compile Include="ShadowrunToolMainWindow.cs" />
-    <Compile Include="gtk-gui\ShadowrunToolMainWindow.cs" />
-    <Compile Include="CharacterNotePage\ImportWindow.cs" />
-    <Compile Include="gtk-gui\ShadowrunGui.ImportWindow.cs" />
-    <Compile Include="CustomRangedWeapon.cs" />
-    <Compile Include="CustomMeleeWeapon.cs" />
-    <Compile Include="CustomAttributes.cs" />
+    <Compile Include="CharacterImport\CharacterImportWindow.cs" />
+    <Compile Include="CharacterImport\ItemImportWindow.cs" />
+    <Compile Include="gtk-gui\ShadowrunGui.ItemImportWindow.cs" />
+    <Compile Include="gtk-gui\CharacterImportWindow.cs" />
+    <Compile Include="ShadowrunWirelessTools.cs" />
+    <Compile Include="gtk-gui\ShadowrunGui.ShadowrunWirelessTools.cs" />
+    <Compile Include="gtk-gui\ShadowrunGui.MessageWindow.cs" />
+    <Compile Include="CommonWindow\MessageWindow.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
@@ -87,6 +88,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="CharacterNotePage\" />
+    <Folder Include="CharacterImport\" />
+    <Folder Include="CustomIManifestITems\" />
+    <Folder Include="CommonWindow\" />
   </ItemGroup>
 </Project>

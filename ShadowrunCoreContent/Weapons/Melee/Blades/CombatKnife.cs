@@ -17,10 +17,6 @@ namespace ShadowrunCoreContent
 			return -3;
 		}
 
-		public override MeleeWeaponType WeaponType (){
-			return MeleeWeaponType.Blade;
-		}
-
 		public override string Name (){
 			return "Combat Knife";
 		}

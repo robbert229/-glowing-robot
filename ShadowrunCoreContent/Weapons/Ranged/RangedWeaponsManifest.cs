@@ -27,7 +27,12 @@ namespace ShadowrunCoreContent
 			contents.Add (new Beretta201T());
 			contents.Add (new ColtAmericaL36());
 			contents.Add (new FichettiSecurity600());
-			contents.Add (new TaurusOmni6());
+			contents.Add (new AresPredator());
+
+			//machine pistols
+			contents.Add (new AresCrusaderII());
+			contents.Add (new CeskaBlackScorpion());
+			contents.Add (new SteyrTMP());
 		}
 
 		public List<IManifestItem> GetContents(){

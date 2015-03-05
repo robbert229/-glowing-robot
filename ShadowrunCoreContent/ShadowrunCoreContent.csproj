@@ -44,7 +44,6 @@
     <Compile Include="Weapons\Ranged\LightPistols\Beretta201T.cs" />
     <Compile Include="Weapons\Ranged\LightPistols\ColtAmericaL36.cs" />
     <Compile Include="Weapons\Ranged\LightPistols\FichettiSecurity600.cs" />
-    <Compile Include="Weapons\Ranged\LightPistols\TaurusOmni6.cs" />
     <Compile Include="Weapons\Melee\Blades\CombatAxe.cs" />
     <Compile Include="Weapons\Melee\Blades\CombatKnife.cs" />
     <Compile Include="Weapons\Melee\Blades\ForearmSnapBlades.cs" />
@@ -56,6 +55,10 @@
     <Compile Include="Weapons\Melee\Blades\MeleeWeaponsManifest.cs" />
     <Compile Include="Attributes\AttributesManifest.cs" />
     <Compile Include="Attributes\Gangers\AverageGangerAttributes.cs" />
+    <Compile Include="Weapons\Ranged\MachinePistols\AresCrusaderII.cs" />
+    <Compile Include="Weapons\Ranged\MachinePistols\CeskaBlackScorpion.cs" />
+    <Compile Include="Weapons\Ranged\MachinePistols\SteyrTMP.cs" />
+    <Compile Include="Weapons\Ranged\LightPistols\AresPredator.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
@@ -68,6 +71,7 @@
     <Folder Include="Weapons\Melee\Blades\" />
     <Folder Include="Attributes\" />
     <Folder Include="Attributes\Gangers\" />
+    <Folder Include="Weapons\Ranged\MachinePistols\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\shadowrunLogic\ShadowrunLogic.csproj">

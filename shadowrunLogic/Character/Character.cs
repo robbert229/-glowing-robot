@@ -14,6 +14,11 @@ namespace ShadowrunLogic
 			this.rangedWeapon = rangedWeapon;
 			this.meleeWeapon = meleeWeapon;
 		}
+
+		public override string ToString ()
+		{
+			return string.Format ("[Character: attributes={0}, meleeWeapon={1}, rangedWeapon={2}]", attributes, meleeWeapon, rangedWeapon);
+		}
 	}
 }
 

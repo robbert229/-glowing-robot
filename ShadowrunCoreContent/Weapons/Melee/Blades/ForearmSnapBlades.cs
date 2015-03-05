@@ -17,10 +17,6 @@ namespace ShadowrunCoreContent
 			return -2;
 		}
 
-		public override MeleeWeaponType WeaponType (){
-			return MeleeWeaponType.Blade;
-		}
-
 		public override string Name (){
 			return "Forearm snap-blades";
 		}

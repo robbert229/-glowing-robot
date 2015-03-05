@@ -16,11 +16,6 @@ namespace ShadowrunCoreContent
 		public override int AP (){
 			return -2;
 		}
-
-		public override MeleeWeaponType WeaponType (){
-			return MeleeWeaponType.Blade;
-		}
-
 		public override string Name (){
 			return "Polearm";
 		}

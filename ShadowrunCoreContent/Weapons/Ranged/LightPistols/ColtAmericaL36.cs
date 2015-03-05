@@ -21,10 +21,6 @@ namespace ShadowrunCoreContent
 			return 0;
 		} 
 
-		public override RangedWeaponType WeaponType() {
-			return RangedWeaponType.LightPistols;
-		}
-
 		public override RangedFiringModes FiringModes() {
 			RangedFiringModes rfm = new RangedFiringModes();
 			rfm.SemiAutomatic = true;

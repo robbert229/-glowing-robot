@@ -8,7 +8,7 @@ namespace ShadowrunGui
 		public static void Main (string[] args)
 		{
 			Application.Init ();
-			var win = new ShadowrunToolMainWindow();
+			var win = new ShadowrunWirelessTools();
 			win.Show ();
 			Application.Run ();
 		}

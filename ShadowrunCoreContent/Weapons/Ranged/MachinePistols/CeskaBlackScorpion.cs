@@ -2,10 +2,10 @@ using System;
 using ShadowrunLogic;
 namespace ShadowrunCoreContent
 {
-	public class WaltherPalmPistol : AbstractRangedWeapon
+	public class CeskaBlackScorpion : AbstractRangedWeapon
 	{
 		public override int Damage() {
-			return 7;
+			return 6;
 		}
 
 		public override DamageType DamageType(){
@@ -13,7 +13,7 @@ namespace ShadowrunCoreContent
 		}
 
 		public override int Accuracy() {
-			return 4;
+			return 5;
 		}
 
 		public override int AP ()
@@ -21,28 +21,29 @@ namespace ShadowrunCoreContent
 			return 0;
 		} 
 
+
 		public override RangedFiringModes FiringModes() {
 			RangedFiringModes rfm = new RangedFiringModes();
-			rfm.SingleShot = true;
-			rfm.SemiAutomaticBurst = true;
+			rfm.SemiAutomatic = true;
+			rfm.BurstFire = true;
 			return rfm;
 		}
 
 		public override int MagSize(){
-			return 2;
+			return 35;
 		}
 
 		public override string Name(){
-			return "Walther Palm Pistol";
+			return "Ceska Black Scorpion";
 		}
-
+				
 		public override int Recoil(){
-			return 0;
+			return 2;
 		}
 
 		public override RangedWeaponSkills Skill ()
 		{
-			return RangedWeaponSkills.Pistols;
+			return RangedWeaponSkills.Automatics;
 		}
 	}
 }
