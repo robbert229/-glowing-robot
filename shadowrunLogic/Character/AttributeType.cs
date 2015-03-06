@@ -6,6 +6,8 @@ namespace ShadowrunLogic
 	{
 		Ganger,
 		GangerLieutenant,
+		Corporate,
+		CorporateLietenant,
 		Custom
 	}
 }

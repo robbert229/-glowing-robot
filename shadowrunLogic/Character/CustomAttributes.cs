@@ -2,6 +2,7 @@ using System;
 
 namespace ShadowrunLogic
 {
+	[Serializable]
 	public class CustomAttributes : AbstractAttributes
 	{
 		private int body;

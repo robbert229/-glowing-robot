@@ -5,16 +5,10 @@ namespace ShadowrunGui
 	public partial class ShadowrunWirelessTools
 	{
 		private global::Gtk.Notebook ShadowrunWirelessTools_Notebook;
-		private global::Gtk.VBox vbox6;
-		private global::Gtk.ScrolledWindow GtkScrolledWindow;
-		private global::Gtk.TreeView Characters_TreeView;
-		private global::Gtk.HSeparator hseparator3;
-		private global::Gtk.HBox CharacterImportButton_HBox;
-		private global::Gtk.Button DeleteCharacter_Button;
-		private global::Gtk.Button CharacterDuplicate_Button;
-		private global::Gtk.Button ModifyCharacter_Button;
-		private global::Gtk.Button NewCharacter_Button;
+		private global::ShadowrunGui.CharacterPageWidget characterpagewidget1;
 		private global::Gtk.Label CharacterImportTab_Label;
+		private global::ShadowrunGui.CombatPageWidget combatpagewidget1;
+		private global::Gtk.Label CombatTab_Label;
 		
 		protected virtual void Build ()
 		{
@@ -29,93 +23,36 @@ namespace ShadowrunGui
 			this.ShadowrunWirelessTools_Notebook.Name = "ShadowrunWirelessTools_Notebook";
 			this.ShadowrunWirelessTools_Notebook.CurrentPage = 0;
 			// Container child ShadowrunWirelessTools_Notebook.Gtk.Notebook+NotebookChild
-			this.vbox6 = new global::Gtk.VBox ();
-			this.vbox6.Name = "vbox6";
-			this.vbox6.Spacing = 6;
-			// Container child vbox6.Gtk.Box+BoxChild
-			this.GtkScrolledWindow = new global::Gtk.ScrolledWindow ();
-			this.GtkScrolledWindow.Name = "GtkScrolledWindow";
-			this.GtkScrolledWindow.ShadowType = ((global::Gtk.ShadowType)(1));
-			// Container child GtkScrolledWindow.Gtk.Container+ContainerChild
-			this.Characters_TreeView = new global::Gtk.TreeView ();
-			this.Characters_TreeView.CanFocus = true;
-			this.Characters_TreeView.Name = "Characters_TreeView";
-			this.GtkScrolledWindow.Add (this.Characters_TreeView);
-			this.vbox6.Add (this.GtkScrolledWindow);
-			global::Gtk.Box.BoxChild w2 = ((global::Gtk.Box.BoxChild)(this.vbox6 [this.GtkScrolledWindow]));
-			w2.Position = 0;
-			// Container child vbox6.Gtk.Box+BoxChild
-			this.hseparator3 = new global::Gtk.HSeparator ();
-			this.hseparator3.Name = "hseparator3";
-			this.vbox6.Add (this.hseparator3);
-			global::Gtk.Box.BoxChild w3 = ((global::Gtk.Box.BoxChild)(this.vbox6 [this.hseparator3]));
-			w3.Position = 1;
-			w3.Expand = false;
-			w3.Fill = false;
-			// Container child vbox6.Gtk.Box+BoxChild
-			this.CharacterImportButton_HBox = new global::Gtk.HBox ();
-			this.CharacterImportButton_HBox.Name = "CharacterImportButton_HBox";
-			this.CharacterImportButton_HBox.Spacing = 6;
-			// Container child CharacterImportButton_HBox.Gtk.Box+BoxChild
-			this.DeleteCharacter_Button = new global::Gtk.Button ();
-			this.DeleteCharacter_Button.CanFocus = true;
-			this.DeleteCharacter_Button.Name = "DeleteCharacter_Button";
-			this.DeleteCharacter_Button.UseUnderline = true;
-			this.DeleteCharacter_Button.Label = global::Mono.Unix.Catalog.GetString ("Delete");
-			this.CharacterImportButton_HBox.Add (this.DeleteCharacter_Button);
-			global::Gtk.Box.BoxChild w4 = ((global::Gtk.Box.BoxChild)(this.CharacterImportButton_HBox [this.DeleteCharacter_Button]));
-			w4.Position = 0;
-			// Container child CharacterImportButton_HBox.Gtk.Box+BoxChild
-			this.CharacterDuplicate_Button = new global::Gtk.Button ();
-			this.CharacterDuplicate_Button.CanFocus = true;
-			this.CharacterDuplicate_Button.Name = "CharacterDuplicate_Button";
-			this.CharacterDuplicate_Button.UseUnderline = true;
-			this.CharacterDuplicate_Button.Label = global::Mono.Unix.Catalog.GetString ("Duplicate");
-			this.CharacterImportButton_HBox.Add (this.CharacterDuplicate_Button);
-			global::Gtk.Box.BoxChild w5 = ((global::Gtk.Box.BoxChild)(this.CharacterImportButton_HBox [this.CharacterDuplicate_Button]));
-			w5.Position = 1;
-			// Container child CharacterImportButton_HBox.Gtk.Box+BoxChild
-			this.ModifyCharacter_Button = new global::Gtk.Button ();
-			this.ModifyCharacter_Button.CanFocus = true;
-			this.ModifyCharacter_Button.Name = "ModifyCharacter_Button";
-			this.ModifyCharacter_Button.UseUnderline = true;
-			this.ModifyCharacter_Button.Label = global::Mono.Unix.Catalog.GetString ("Modify");
-			this.CharacterImportButton_HBox.Add (this.ModifyCharacter_Button);
-			global::Gtk.Box.BoxChild w6 = ((global::Gtk.Box.BoxChild)(this.CharacterImportButton_HBox [this.ModifyCharacter_Button]));
-			w6.Position = 2;
-			// Container child CharacterImportButton_HBox.Gtk.Box+BoxChild
-			this.NewCharacter_Button = new global::Gtk.Button ();
-			this.NewCharacter_Button.CanFocus = true;
-			this.NewCharacter_Button.Name = "NewCharacter_Button";
-			this.NewCharacter_Button.UseUnderline = true;
-			this.NewCharacter_Button.Label = global::Mono.Unix.Catalog.GetString ("New");
-			this.CharacterImportButton_HBox.Add (this.NewCharacter_Button);
-			global::Gtk.Box.BoxChild w7 = ((global::Gtk.Box.BoxChild)(this.CharacterImportButton_HBox [this.NewCharacter_Button]));
-			w7.Position = 3;
-			this.vbox6.Add (this.CharacterImportButton_HBox);
-			global::Gtk.Box.BoxChild w8 = ((global::Gtk.Box.BoxChild)(this.vbox6 [this.CharacterImportButton_HBox]));
-			w8.Position = 2;
-			w8.Expand = false;
-			w8.Fill = false;
-			this.ShadowrunWirelessTools_Notebook.Add (this.vbox6);
+			this.characterpagewidget1 = new global::ShadowrunGui.CharacterPageWidget ();
+			this.characterpagewidget1.Events = ((global::Gdk.EventMask)(256));
+			this.characterpagewidget1.Name = "characterpagewidget1";
+			this.ShadowrunWirelessTools_Notebook.Add (this.characterpagewidget1);
 			// Notebook tab
 			this.CharacterImportTab_Label = new global::Gtk.Label ();
 			this.CharacterImportTab_Label.Name = "CharacterImportTab_Label";
 			this.CharacterImportTab_Label.LabelProp = global::Mono.Unix.Catalog.GetString ("Character Import");
-			this.ShadowrunWirelessTools_Notebook.SetTabLabel (this.vbox6, this.CharacterImportTab_Label);
+			this.ShadowrunWirelessTools_Notebook.SetTabLabel (this.characterpagewidget1, this.CharacterImportTab_Label);
 			this.CharacterImportTab_Label.ShowAll ();
+			// Container child ShadowrunWirelessTools_Notebook.Gtk.Notebook+NotebookChild
+			this.combatpagewidget1 = new global::ShadowrunGui.CombatPageWidget ();
+			this.combatpagewidget1.Events = ((global::Gdk.EventMask)(256));
+			this.combatpagewidget1.Name = "combatpagewidget1";
+			this.ShadowrunWirelessTools_Notebook.Add (this.combatpagewidget1);
+			global::Gtk.Notebook.NotebookChild w2 = ((global::Gtk.Notebook.NotebookChild)(this.ShadowrunWirelessTools_Notebook [this.combatpagewidget1]));
+			w2.Position = 1;
+			// Notebook tab
+			this.CombatTab_Label = new global::Gtk.Label ();
+			this.CombatTab_Label.Name = "CombatTab_Label";
+			this.CombatTab_Label.LabelProp = global::Mono.Unix.Catalog.GetString ("Combat");
+			this.ShadowrunWirelessTools_Notebook.SetTabLabel (this.combatpagewidget1, this.CombatTab_Label);
+			this.CombatTab_Label.ShowAll ();
 			this.Add (this.ShadowrunWirelessTools_Notebook);
 			if ((this.Child != null)) {
 				this.Child.ShowAll ();
 			}
-			this.DefaultWidth = 400;
-			this.DefaultHeight = 300;
+			this.DefaultWidth = 984;
+			this.DefaultHeight = 506;
 			this.Show ();
-			this.DeleteEvent += new global::Gtk.DeleteEventHandler (this.Form_Destroy);
-			this.DeleteCharacter_Button.Clicked += new global::System.EventHandler (this.DeleteCharacter_Click);
-			this.CharacterDuplicate_Button.Clicked += new global::System.EventHandler (this.CharacterDuplicate_Click);
-			this.ModifyCharacter_Button.Clicked += new global::System.EventHandler (this.ModifyCharacter_Click);
-			this.NewCharacter_Button.Clicked += new global::System.EventHandler (this.NewCharacter_Click);
 		}
 	}
 }

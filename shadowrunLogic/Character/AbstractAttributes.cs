@@ -1,9 +1,11 @@
 using System;
+using System.Xml.Serialization;
 
 namespace ShadowrunLogic
 {
 	public abstract class AbstractAttributes : IManifestItem
 	{
+		public abstract string Name ();
 		#region attributes
 		public abstract int Body();
 		public abstract int Agility();
@@ -19,6 +21,7 @@ namespace ShadowrunLogic
 
 		public abstract int Armor();
 
+		#region damage related
 		public int StunDamageTaken { get; set; }
 		public int PhysicalDamageTaken { get; set; }
 
@@ -37,8 +40,7 @@ namespace ShadowrunLogic
 				return sMod;
 			return pMod;
 		}
-
-		public abstract string Name ();
+		#endregion
 
 		public abstract AttributeType AttributeType();
 		public string TypeString ()

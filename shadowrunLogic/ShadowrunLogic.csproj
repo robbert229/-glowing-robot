@@ -37,12 +37,12 @@
       <Package>gtk-sharp-2.0</Package>
     </Reference>
     <Reference Include="Mono.Posix" />
+    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AssemblyInfo.cs" />
     <Compile Include="DiceRoller.cs" />
     <Compile Include="Pool.cs" />
-    <Compile Include="Combat.cs" />
     <Compile Include="DamageType.cs" />
     <Compile Include="Weapons\Ranged\RangedFiringModes.cs" />
     <Compile Include="Character\AbstractAttributes.cs" />
@@ -58,6 +58,9 @@
     <Compile Include="Character\CustomAttributes.cs" />
     <Compile Include="Weapons\Melee\CustomMeleeWeapon.cs" />
     <Compile Include="Weapons\Ranged\CustomRangedWeapon.cs" />
+    <Compile Include="Initiative.cs" />
+    <Compile Include="Dice\Dice.cs" />
+    <Compile Include="Character\InitiativeComparer.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
@@ -66,6 +69,7 @@
     <Folder Include="Weapons\Melee\" />
     <Folder Include="Weapons\Ranged\" />
     <Folder Include="Manifest\" />
+    <Folder Include="Dice\" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="gtk-gui\gui.stetic">

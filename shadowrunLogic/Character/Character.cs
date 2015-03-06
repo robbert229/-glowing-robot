@@ -2,17 +2,24 @@ using System;
 
 namespace ShadowrunLogic
 {
+	[Serializable]
 	public class Character
 	{
 		public AbstractAttributes attributes { get; protected set; }
 		public AbstractMeleeWeapon meleeWeapon {get; protected set;}
 		public AbstractRangedWeapon rangedWeapon {get; protected set;}
 
+		public int initiative { get; set; }
+
 		public Character (AbstractAttributes attributes,AbstractRangedWeapon rangedWeapon, AbstractMeleeWeapon meleeWeapon)
 		{
-			this.attributes = attributes;
-			this.rangedWeapon = rangedWeapon;
-			this.meleeWeapon = meleeWeapon;
+			this.attributes = attributes.Clone();
+			this.rangedWeapon = rangedWeapon.Clone ();
+			this.meleeWeapon = meleeWeapon.Clone();
+		}
+
+		public Character(){
+
 		}
 
 		public override string ToString ()

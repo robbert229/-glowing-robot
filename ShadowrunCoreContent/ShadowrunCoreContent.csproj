@@ -59,6 +59,7 @@
     <Compile Include="Weapons\Ranged\MachinePistols\CeskaBlackScorpion.cs" />
     <Compile Include="Weapons\Ranged\MachinePistols\SteyrTMP.cs" />
     <Compile Include="Weapons\Ranged\LightPistols\AresPredator.cs" />
+    <Compile Include="Attributes\Corporate\CorporateSecurityAttributes.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
@@ -72,6 +73,7 @@
     <Folder Include="Attributes\" />
     <Folder Include="Attributes\Gangers\" />
     <Folder Include="Weapons\Ranged\MachinePistols\" />
+    <Folder Include="Attributes\Corporate\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\shadowrunLogic\ShadowrunLogic.csproj">

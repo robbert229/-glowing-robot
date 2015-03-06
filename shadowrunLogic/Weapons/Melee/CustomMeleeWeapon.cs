@@ -3,6 +3,7 @@ using ShadowrunLogic;
 
 namespace ShadowrunLogic
 {
+	[Serializable]
 	public class CustomMeleeWeapon : AbstractMeleeWeapon
 	{
 		private int damage;

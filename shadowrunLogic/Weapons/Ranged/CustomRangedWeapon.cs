@@ -2,6 +2,7 @@ using System;
 
 namespace ShadowrunLogic
 {
+	[Serializable]
 	public class CustomRangedWeapon : AbstractRangedWeapon
 	{
 		private int damage;

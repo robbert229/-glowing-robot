@@ -57,6 +57,10 @@
       <Package>gtk-sharp-2.0</Package>
     </Reference>
     <Reference Include="Mono.Posix" />
+    <Reference Include="libstetic">
+      <HintPath>..\..\..\..\..\usr\lib\monodevelop\AddIns\MonoDevelop.GtkCore\libstetic.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="gtk-gui\gui.stetic">
@@ -67,14 +71,22 @@
     <Compile Include="gtk-gui\generated.cs" />
     <Compile Include="Main.cs" />
     <Compile Include="AssemblyInfo.cs" />
-    <Compile Include="CharacterImport\CharacterImportWindow.cs" />
-    <Compile Include="CharacterImport\ItemImportWindow.cs" />
     <Compile Include="gtk-gui\ShadowrunGui.ItemImportWindow.cs" />
-    <Compile Include="gtk-gui\CharacterImportWindow.cs" />
-    <Compile Include="ShadowrunWirelessTools.cs" />
     <Compile Include="gtk-gui\ShadowrunGui.ShadowrunWirelessTools.cs" />
     <Compile Include="gtk-gui\ShadowrunGui.MessageWindow.cs" />
-    <Compile Include="CommonWindow\MessageWindow.cs" />
+    <Compile Include="gtk-gui\ShadowrunGui.InputWindow.cs" />
+    <Compile Include="WidgetsAndWindows\Pages\General\InputWindow.cs" />
+    <Compile Include="WidgetsAndWindows\Pages\CharacterCreation\ItemImportWindow.cs" />
+    <Compile Include="WidgetsAndWindows\Pages\General\MessageWindow.cs" />
+    <Compile Include="WidgetsAndWindows\ShadowrunWirelessTools.cs" />
+    <Compile Include="WidgetsAndWindows\Pages\CharacterCreation\CharacterWindow.cs" />
+    <Compile Include="gtk-gui\CharacterWindow.cs" />
+    <Compile Include="WidgetsAndWindows\Pages\CharacterCreation\CharacterPageWidget.cs" />
+    <Compile Include="WidgetsAndWindows\Pages\Combat\CombatPageWidget.cs" />
+    <Compile Include="gtk-gui\ShadowrunGui.CharacterPageWidget.cs" />
+    <Compile Include="gtk-gui\ShadowrunGui.CombatPageWidget.cs" />
+    <Compile Include="WidgetsAndWindows\Pages\General\CharacterSelectWindow.cs" />
+    <Compile Include="gtk-gui\ShadowrunGui.CharacterSelectWindow.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
@@ -89,7 +101,10 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="CharacterImport\" />
-    <Folder Include="CustomIManifestITems\" />
-    <Folder Include="CommonWindow\" />
+    <Folder Include="WidgetsAndWindows\" />
+    <Folder Include="WidgetsAndWindows\Pages\" />
+    <Folder Include="WidgetsAndWindows\Pages\Combat\" />
+    <Folder Include="WidgetsAndWindows\Pages\General\" />
+    <Folder Include="WidgetsAndWindows\Pages\CharacterCreation\" />
   </ItemGroup>
 </Project>
