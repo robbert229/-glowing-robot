@@ -38,7 +38,7 @@ namespace ShadowrunLogic
 
 			if(sMod > pMod)
 				return sMod;
-			return pMod;
+			return 0 - pMod;
 		}
 		#endregion
 
@@ -59,6 +59,26 @@ namespace ShadowrunLogic
 		public abstract int ThrowingWeapons();
 		public abstract int UnarmedCombat();
 		#endregion
+
+		public int getSkillRating (RangedWeaponSkills skill)
+		{
+			switch (skill) {
+			case RangedWeaponSkills.Archery:
+				return Archery();
+			case RangedWeaponSkills.Automatics:
+				return Automatics();
+			case RangedWeaponSkills.HeavyWeapons:
+				return HeavyWeapons();
+			case RangedWeaponSkills.Longarms:
+				return Longarms();
+			case RangedWeaponSkills.Pistols:
+				return Pistols();
+			case RangedWeaponSkills.ThrowingWeapons:
+				return ThrowingWeapons();
+			default:
+				return 0;
+			}
+		}
 
 		public AbstractAttributes Clone ()
 		{

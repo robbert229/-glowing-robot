@@ -160,13 +160,7 @@ namespace ShadowrunGui
 
 		protected void NextCharacter_Clicked (object sender, EventArgs e)
 		{
-			selectedIndex++;
-			RenderInitiativeTree ();
-			RenderStatusTree ();
-
-			if (selectedIndex >= characters.Count) {
-				NextPass();
-			}
+			NextCharacter();
 		}
 
 		private void NextPass(){
@@ -201,9 +195,18 @@ namespace ShadowrunGui
 
 		}
 
+
+		void NextCharacter ()
+		{
+			selectedIndex++;
+			RenderInitiativeTree ();
+			RenderStatusTree ();
+			if (selectedIndex >= characters.Count)
+				NextPass ();
+		}
+
 		protected void AttackRanged_Clicked (object sender, EventArgs e)
 		{
-
 			try {
 				var f = new List<Character> (characters);
 				f.Remove (GetSelectedInitiativeCharacter ());
@@ -211,19 +214,23 @@ namespace ShadowrunGui
 				var csw = new CharacterSelectWindow (f);
 
 				csw.Destroyed += delegate {
-
+					new CombatSequence(GetSelectedInitiativeCharacter(),csw.character,new CallBack(AfterAttack));
 				};
 			} catch {
 				new MessageWindow("Error","Make sure you have started the initiative");
 			}
 		}
 
+		protected void AfterAttack ()
+		{
+			NextCharacter();
+		}
+
 		protected void AttackMelee_Clicked(object sender, EventArgs e){
 			var csw = new CharacterSelectWindow(characters);
 			csw.Destroyed += delegate {
-			
+				
 			};
-			;
 		}
 		#endregion
 	}

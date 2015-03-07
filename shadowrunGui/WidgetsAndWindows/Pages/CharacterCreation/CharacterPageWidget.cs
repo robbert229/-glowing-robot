@@ -114,7 +114,8 @@ namespace ShadowrunGui
 					var other = new Character(
 						selected.attributes.Clone(),
 						selected.rangedWeapon.Clone(),
-						selected.meleeWeapon.Clone()
+						selected.meleeWeapon.Clone(),
+						selected.isBot
 					);
 
 					characters.Add(other);

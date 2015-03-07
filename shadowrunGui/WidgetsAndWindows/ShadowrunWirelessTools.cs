@@ -19,18 +19,10 @@ namespace ShadowrunGui
 			this.Build ();
 			this.characters = new List<Character>();
 
-			this.characters.Add (new Character(new GangerAttributes(),new FichettiSecurity600(),new Katana()));
-			this.characters.Add (new Character(new CorporateSecurityAttributes(),new FichettiSecurity600(),new Katana()));
-
-			/*var character = characters[0];
-			IFormatter formatter = new BinaryFormatter();
-			Stream stream = new FileStream("MyFile.bin", FileMode.Create, FileAccess.Write, FileShare.None);
-			formatter.Serialize(stream, new GangerAttributes().Clone());
-			stream.Close();*/
-
+			this.characters.Add (new Character(new GangerAttributes(),new FichettiSecurity600(),new Katana(),true));
+			this.characters.Add (new Character(new CorporateSecurityAttributes(),new FichettiSecurity600(),new Katana(),true));
 
 			this.characterpagewidget1.SetCharacters(characters);
-
 			this.combatpagewidget1.SetCharacters(characters);
 
 			this.Destroyed += delegate {

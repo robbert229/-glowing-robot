@@ -87,6 +87,7 @@
     <Compile Include="gtk-gui\ShadowrunGui.CombatPageWidget.cs" />
     <Compile Include="WidgetsAndWindows\Pages\General\CharacterSelectWindow.cs" />
     <Compile Include="gtk-gui\ShadowrunGui.CharacterSelectWindow.cs" />
+    <Compile Include="WidgetsAndWindows\Pages\Combat\CombatSequence.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>

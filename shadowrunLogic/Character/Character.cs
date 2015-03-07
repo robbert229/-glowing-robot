@@ -8,14 +8,17 @@ namespace ShadowrunLogic
 		public AbstractAttributes attributes { get; protected set; }
 		public AbstractMeleeWeapon meleeWeapon {get; protected set;}
 		public AbstractRangedWeapon rangedWeapon {get; protected set;}
+		public Boolean isBot { get; set; }
+
 
 		public int initiative { get; set; }
 
-		public Character (AbstractAttributes attributes,AbstractRangedWeapon rangedWeapon, AbstractMeleeWeapon meleeWeapon)
+		public Character (AbstractAttributes attributes,AbstractRangedWeapon rangedWeapon, AbstractMeleeWeapon meleeWeapon, bool auto)
 		{
 			this.attributes = attributes.Clone();
 			this.rangedWeapon = rangedWeapon.Clone ();
 			this.meleeWeapon = meleeWeapon.Clone();
+			this.isBot = auto;
 		}
 
 		public Character(){

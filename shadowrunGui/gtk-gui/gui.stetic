@@ -80,11 +80,26 @@
                               </packing>
                             </child>
                             <child>
+                              <widget class="Gtk.CheckButton" id="Bot_Checkbox">
+                                <property name="MemberName" />
+                                <property name="CanFocus">True</property>
+                                <property name="Label" translatable="yes">Autonamous</property>
+                                <property name="Active">True</property>
+                                <property name="DrawIndicator">True</property>
+                                <property name="HasLabel">True</property>
+                                <property name="UseUnderline">True</property>
+                              </widget>
+                              <packing>
+                                <property name="Position">1</property>
+                                <property name="AutoSize">False</property>
+                              </packing>
+                            </child>
+                            <child>
                               <widget class="Gtk.HSeparator" id="hseparator2">
                                 <property name="MemberName" />
                               </widget>
                               <packing>
-                                <property name="Position">1</property>
+                                <property name="Position">2</property>
                                 <property name="AutoSize">True</property>
                                 <property name="Expand">False</property>
                                 <property name="Fill">False</property>
@@ -120,7 +135,7 @@
                                 </child>
                               </widget>
                               <packing>
-                                <property name="Position">2</property>
+                                <property name="Position">3</property>
                                 <property name="AutoSize">True</property>
                                 <property name="Expand">False</property>
                                 <property name="Fill">False</property>
@@ -156,7 +171,7 @@
                                 </child>
                               </widget>
                               <packing>
-                                <property name="Position">3</property>
+                                <property name="Position">4</property>
                                 <property name="AutoSize">True</property>
                                 <property name="Expand">False</property>
                                 <property name="Fill">False</property>
@@ -192,7 +207,7 @@
                                 </child>
                               </widget>
                               <packing>
-                                <property name="Position">4</property>
+                                <property name="Position">5</property>
                                 <property name="AutoSize">True</property>
                                 <property name="Expand">False</property>
                                 <property name="Fill">False</property>
@@ -228,7 +243,7 @@
                                 </child>
                               </widget>
                               <packing>
-                                <property name="Position">5</property>
+                                <property name="Position">6</property>
                                 <property name="AutoSize">True</property>
                                 <property name="Expand">False</property>
                                 <property name="Fill">False</property>
@@ -264,7 +279,7 @@
                                 </child>
                               </widget>
                               <packing>
-                                <property name="Position">6</property>
+                                <property name="Position">7</property>
                                 <property name="AutoSize">True</property>
                                 <property name="Expand">False</property>
                                 <property name="Fill">False</property>
@@ -300,7 +315,7 @@
                                 </child>
                               </widget>
                               <packing>
-                                <property name="Position">7</property>
+                                <property name="Position">8</property>
                                 <property name="AutoSize">True</property>
                                 <property name="Expand">False</property>
                                 <property name="Fill">False</property>
@@ -336,7 +351,7 @@
                                 </child>
                               </widget>
                               <packing>
-                                <property name="Position">8</property>
+                                <property name="Position">9</property>
                                 <property name="AutoSize">True</property>
                                 <property name="Expand">False</property>
                                 <property name="Fill">False</property>
@@ -372,7 +387,7 @@
                                 </child>
                               </widget>
                               <packing>
-                                <property name="Position">9</property>
+                                <property name="Position">10</property>
                                 <property name="AutoSize">True</property>
                                 <property name="Expand">False</property>
                                 <property name="Fill">False</property>
@@ -383,7 +398,7 @@
                                 <property name="MemberName" />
                               </widget>
                               <packing>
-                                <property name="Position">10</property>
+                                <property name="Position">11</property>
                                 <property name="AutoSize">True</property>
                                 <property name="Expand">False</property>
                                 <property name="Fill">False</property>
@@ -444,7 +459,7 @@
                                 </child>
                               </widget>
                               <packing>
-                                <property name="Position">11</property>
+                                <property name="Position">12</property>
                                 <property name="AutoSize">True</property>
                                 <property name="Expand">False</property>
                                 <property name="Fill">False</property>
@@ -455,7 +470,7 @@
                                 <property name="MemberName" />
                               </widget>
                               <packing>
-                                <property name="Position">12</property>
+                                <property name="Position">13</property>
                                 <property name="AutoSize">True</property>
                                 <property name="Expand">False</property>
                                 <property name="Fill">False</property>
@@ -491,7 +506,7 @@
                                 </child>
                               </widget>
                               <packing>
-                                <property name="Position">13</property>
+                                <property name="Position">14</property>
                                 <property name="AutoSize">True</property>
                                 <property name="Expand">False</property>
                                 <property name="Fill">False</property>
@@ -2058,7 +2073,7 @@
       </widget>
     </child>
   </widget>
-  <widget class="Gtk.Window" id="ShadowrunGui.ShadowrunWirelessTools" design-size="984 506">
+  <widget class="Gtk.Window" id="ShadowrunGui.ShadowrunWirelessTools" design-size="984 626">
     <property name="MemberName" />
     <property name="Title" translatable="yes">ShadowrunWirelessTools</property>
     <property name="WindowPosition">CenterOnParent</property>
@@ -2066,7 +2081,7 @@
       <widget class="Gtk.Notebook" id="ShadowrunWirelessTools_Notebook">
         <property name="MemberName" />
         <property name="CanFocus">True</property>
-        <property name="CurrentPage">0</property>
+        <property name="CurrentPage">1</property>
         <child>
           <widget class="ShadowrunGui.CharacterPageWidget" id="characterpagewidget1">
             <property name="MemberName" />

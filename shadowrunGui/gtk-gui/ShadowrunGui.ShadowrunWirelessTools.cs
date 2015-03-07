@@ -21,7 +21,7 @@ namespace ShadowrunGui
 			this.ShadowrunWirelessTools_Notebook = new global::Gtk.Notebook ();
 			this.ShadowrunWirelessTools_Notebook.CanFocus = true;
 			this.ShadowrunWirelessTools_Notebook.Name = "ShadowrunWirelessTools_Notebook";
-			this.ShadowrunWirelessTools_Notebook.CurrentPage = 0;
+			this.ShadowrunWirelessTools_Notebook.CurrentPage = 1;
 			// Container child ShadowrunWirelessTools_Notebook.Gtk.Notebook+NotebookChild
 			this.characterpagewidget1 = new global::ShadowrunGui.CharacterPageWidget ();
 			this.characterpagewidget1.Events = ((global::Gdk.EventMask)(256));
@@ -51,7 +51,7 @@ namespace ShadowrunGui
 				this.Child.ShowAll ();
 			}
 			this.DefaultWidth = 984;
-			this.DefaultHeight = 506;
+			this.DefaultHeight = 626;
 			this.Show ();
 		}
 	}

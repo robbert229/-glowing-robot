@@ -34,6 +34,7 @@ public partial class CharacterWindow: Gtk.Window
 		SetRenderedAttributes(c.attributes);
 		SetRenderedMeleeWeapon(c.meleeWeapon);
 		SetRenderedRangedWeapon(c.rangedWeapon);
+		Bot_Checkbox.Active = c.isBot;
 	}
 
 	private void LoadContentFromManifests ()
@@ -92,7 +93,8 @@ public partial class CharacterWindow: Gtk.Window
 			this.character = new Character (
 				attributesFromFormInput (),
 				rangedWeaponFromFormInput (),
-				meleeWeaponFromFormInput ()
+				meleeWeaponFromFormInput (),
+				Bot_Checkbox.Active
 			);
 
 			this.Destroy ();
